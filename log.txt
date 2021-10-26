@@ -1,0 +1,101 @@
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/home/circleci/project/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.4.2/ext/sqlite3
+/usr/local/bin/ruby -I /usr/local/lib/ruby/3.0.0 -r
+./siteconf20211025-58-kjpbm2.rb extconf.rb
+checking for sqlite3.h... no
+sqlite3.h is missing. Try 'brew install sqlite3',
+'yum install sqlite-devel' or 'apt-get install libsqlite3-dev'
+and check your shared library search path (the
+location where your sqlite3 shared library is located).
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/usr/local/bin/$(RUBY_BASE_NAME)
+	--with-sqlcipher
+	--without-sqlcipher
+	--with-sqlite3-config
+	--without-sqlite3-config
+	--with-pkg-config
+	--without-pkg-config
+	--with-sqlcipher
+	--without-sqlcipher
+	--with-sqlite3-dir
+	--without-sqlite3-dir
+	--with-sqlite3-include
+	--without-sqlite3-include=${sqlite3-dir}/include
+	--with-sqlite3-lib
+	--without-sqlite3-lib=${sqlite3-dir}/lib
+
+To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/home/circleci/project/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0-static/sqlite3-1.4.2/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in
+/home/circleci/project/vendor/bundle/ruby/3.0.0/gems/sqlite3-1.4.2 for
+inspection.
+Results logged to
+/home/circleci/project/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0-static/sqlite3-1.4.2/gem_make.out
+
+  /usr/local/lib/ruby/3.0.0/rubygems/ext/builder.rb:91:in `run'
+/usr/local/lib/ruby/3.0.0/rubygems/ext/ext_conf_builder.rb:48:in `block in
+build'
+  /usr/local/lib/ruby/3.0.0/tempfile.rb:317:in `open'
+  /usr/local/lib/ruby/3.0.0/rubygems/ext/ext_conf_builder.rb:28:in `build'
+  /usr/local/lib/ruby/3.0.0/rubygems/ext/builder.rb:157:in `build_extension'
+/usr/local/lib/ruby/3.0.0/rubygems/ext/builder.rb:191:in `block in
+build_extensions'
+  /usr/local/lib/ruby/3.0.0/rubygems/ext/builder.rb:188:in `each'
+  /usr/local/lib/ruby/3.0.0/rubygems/ext/builder.rb:188:in `build_extensions'
+  /usr/local/lib/ruby/3.0.0/rubygems/installer.rb:828:in `build_extensions'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/rubygems_gem_installer.rb:66:in
+`build_extensions'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/rubygems_gem_installer.rb:26:in
+`install'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/source/rubygems.rb:199:in
+`install'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/installer/gem_installer.rb:54:in
+`install'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/installer/gem_installer.rb:16:in
+`install_from_spec'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/installer/parallel_installer.rb:186:in
+`do_install'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/installer/parallel_installer.rb:177:in
+`block in worker_pool'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/worker.rb:62:in
+`apply_func'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/worker.rb:57:in
+`block in process_queue'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/worker.rb:54:in
+`loop'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/worker.rb:54:in
+`process_queue'
+/home/circleci/.rubygems/gems/bundler-2.2.28/lib/bundler/worker.rb:91:in
+`block (2 levels) in create_threads'
+
+An error occurred while installing sqlite3 (1.4.2), and Bundler cannot
+continue.
+
+In Gemfile:
+  sqlite3
+
+Exited with code exit status 5
+
+CircleCI received exit code 5

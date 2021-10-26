@@ -1,0 +1,72 @@
+// Place all the styles related to the Article controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.article{
+  .body{
+    white-space: pre-wrap;
+  }
+
+  a{
+    text-decoration: none;
+    color: #40e3e2;
+  }
+  a:visited{
+    color: #40e3e2;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+  .comment{
+    border: 1px solid black;
+    border-radius: 0.3em;
+    margin: 1em;
+    padding: 0.5em;
+    box-shadow: 0.3em 0.3em rgba(0,0,0,.15);
+    transition: all .4s ease;
+  }
+
+  .comment:hover {
+    box-shadow: 0.1em 0.1em rgba(0,0,0,.25);
+  }
+
+}
+
+.post-content{
+  .body{
+    padding: 1em;
+  }
+
+  .description{
+    font-style: italic;
+    font-size: 14px;
+    color: #7c7c7c;
+  }
+
+  .edit{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .edit a{
+    margin: 0 0.5em;
+  }
+}
+
+.form{
+  .form-title input{
+    min-width: 25vw;
+    margin: 1em;
+  }
+
+  .form-body textarea{
+    margin: 1em;
+    min-width: 60vw;
+    min-height: 30vh;
+  }
+}
+
+
+

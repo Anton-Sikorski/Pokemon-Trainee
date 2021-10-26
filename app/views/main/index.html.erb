@@ -1,0 +1,7 @@
+<h1>Main</h1>
+<div class="background-style">
+  <% @users.each do |user| %>
+    <div><%= user.name%></div>
+    <%= link_to "To #{user.name}'s' profile", main_path(user) %>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+
+  <% @articles.each do |article| %>
+    <% if !article.archived? || (user_signed_in? && current_user.admin?) %>
+      <div class="article post-content background-style">
+        <h2> <%= article.title %> </h2>
+        <span class="body"> <%= article.body[0..500] + "....." %> </span>
+          <p><%= link_to "to discussion...", article_path(article) %></p>
+        <hr>
+        <div class="description">
+          <p class="date"><%= article.created_at.strftime("%b %d %Y, %l:%M%P") %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+
+<% if user_signed_in? %>
+    <button class="redirect">
+      <%= link_to "New Article", new_article_path %>
+    </button>
+<% end %>

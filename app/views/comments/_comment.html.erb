@@ -1,0 +1,27 @@
+<div class="comment">
+  <span class="user-name">
+    <% user = @users.find_by(id: comment.user_id) %>
+    <%= user.name %>
+  </span>
+
+  <span>
+    <% time_diff = (Time.now - comment.created_at)/60 %>
+    <% case time_diff.round(0)
+       when 0        %><%= 'Right now'%>
+    <% when 1..60    %><%= (time_diff).round(0)      == 1 ? "1 minute ago" : "#{(time_diff).round(0)} minutes ago"  %>
+    <% when 61..1440 %><%= (time_diff/60).round(0)   == 1 ? "1 hour ago"   : "#{(time_diff/60).round(0)} hours ago" %>
+    <% else          %><%= (time_diff/1440).round(0) == 1 ? "1 day ago"    : "#{(time_diff/(1440)).round(0)} days ago" %>
+    <% end %>
+  </span>
+
+  <p class="comment-body"> <%= comment.body %> </p>
+  <p>
+    <% if user_signed_in? %>
+      <% if current_user.id == comment.user_id || current_user.admin?%>
+        <%= link_to 'Destroy Comment', [comment.article, comment],
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+      <% end %>
+    <% end %>
+  </p>
+</div>

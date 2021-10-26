@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokemon: one
+  front: MyString
+  back: MyString
+  artwork: MyString
+
+two:
+  pokemon: two
+  front: MyString
+  back: MyString
+  artwork: MyString
