@@ -46,6 +46,9 @@ jobs:
       - run:
           name: Database setup
           command: bundle exec rails db:setup
+      - run:
+          name: Schema load
+          command: bundle exec rails db:schema:load --trace
       - ruby/rubocop-check
 
 workflows:
