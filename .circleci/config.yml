@@ -46,8 +46,6 @@ jobs:
       - run:
           name: Database setup
           command: bundle exec rails db:setup
-      # Run rspec in parallel
-      - ruby/rspec-test
       - ruby/rubocop-check
 
 workflows:
