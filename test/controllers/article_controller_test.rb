@@ -6,4 +6,5 @@ class ArticleControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
+  # a
 end
