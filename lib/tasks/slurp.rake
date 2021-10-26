@@ -20,7 +20,7 @@ namespace :slurp do
       print "#{p.id}\n#{p.front}\n#{p.back}\n#{p.artwork}\n\n"
     end
 
-    puts "There are #{Pokemon.count} in DB."
+    puts "There are #{PokeSprite.count} in DB."
   end
 
   desc 'TODO'
@@ -49,7 +49,7 @@ namespace :slurp do
         t.pokemon = Pokemon.find(i)
 
         t.save
-        puts "#{t.pokemon.name} saved. It's type: #{t.p_type}"
+        puts "#{t.pokemon.name} types are saved. It's type: #{t.p_type}"
       end
     end
 

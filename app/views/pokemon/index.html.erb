@@ -1,35 +1,41 @@
-<%= form_with(url: '/pokemon', method: 'get', local: true) do %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-<div class="wrapper">
-  <% @pokemon.each do |pokemon| %>
-    <div class="pokemon-card">
-      <figure class="pokemon-sprite">
-        <% pokemon.poke_sprites.each do |sprite|%>
-          <%= image_tag sprite.front %>
-        <% end %>
-      </figure>
-      <div class="pokemon-id">
-        <% case pokemon.pokedex_id.to_s.length
-             when 1 %><%= '#00' + pokemon.pokedex_id.to_s %>
-          <% when 2 %><%= '#0'  + pokemon.pokedex_id.to_s %>
-          <% when 3 %><%= '#'  + pokemon.pokedex_id.to_s %>
-        <% end %>
-      </div>
-      <% pokemon.name[0] = pokemon.name[0].upcase  %>
-      <div class="pokemon-name"><%= link_to pokemon.name, pokemon_path(pokemon) %></div>
-      <div class="pokemon-type">
-        <% pokemon.poke_types.each do |type| %>
-          <%= content_tag(:div, type.p_type.upcase ,class: "type #{type.p_type}" ) %>
-        <% end %>
-      </div>
-    </div>
+<div class="search-container background-style">
+  <%= form_with(url: '/pokemon', method: 'get', local: true) do %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search") %>
   <% end %>
-</div>
+
+  <% if @pokemon.empty? %>
+    <div class="background-style">No results</div>
+  <% end %>
+
+  <div class="wrapper">
+    <% @pokemon.each do |pokemon| %>
+      <div class="pokemon-card">
+        <figure class="pokemon-sprite">
+          <% pokemon.poke_sprites.each do |sprite|%>
+            <%= image_tag sprite.front %>
+          <% end %>
+        </figure>
+        <div class="pokemon-id">
+          <% case pokemon.pokedex_id.to_s.length
+               when 1 %><%= '#00' + pokemon.pokedex_id.to_s %>
+            <% when 2 %><%= '#0'  + pokemon.pokedex_id.to_s %>
+            <% when 3 %><%= '#'  + pokemon.pokedex_id.to_s %>
+          <% end %>
+        </div>
+        <% pokemon.name[0] = pokemon.name[0].upcase  %>
+        <div class="pokemon-name"><%= link_to pokemon.name, pokemon_path(pokemon) %></div>
+        <div class="pokemon-type">
+          <% pokemon.poke_types.each do |type| %>
+            <%= content_tag(:div, type.p_type.upcase ,class: "type #{type.p_type}" ) %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
 
-<div>
-  <%= paginate @pokemon %>
+  <div>
+    <%= paginate @pokemon %>
+  </div>
 </div>
