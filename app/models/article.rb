@@ -4,9 +4,9 @@
 class Article < ApplicationRecord
   include Visible
 
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :comments, dependent: :destroy
 
-  validates :title, presence: true
-  validates :body, presence: true, length: { minimum: 5 }
+  validates_presence_of :title, :body
+  validates :body, length: { minimum: 5 }
 end

@@ -5,109 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bbe69a-1cc0-4d15-a17f-ee329b9215ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/packs-test/js/application-6a3d7ee8842fc9a8a864.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/packs-test/js/application-6a3d7ee8842fc9a8a864.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/packs-test/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.rspec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/models/article_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/models/pokemon_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Trainee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Trainee.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/pokemon.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pokemon.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/main/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/workers/view_counter_worker.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/workers/view_counter_worker.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/bin/webpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/bin/webpack-dev-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/spring.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/spring.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/article_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/comment_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/main_controller_test.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/pokemon_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/pokemon_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/articles.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/articles.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/comments.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/comments.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/poke_sprites.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/poke_sprites.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/poke_types.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/poke_types.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/pokemons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/pokemons.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/article_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/article_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/2a/2anEQV0jKvYFWtwGTEIohdnD9KDM9KxjdaJ5H3Q8jRE.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/2a/2anEQV0jKvYFWtwGTEIohdnD9KDM9KxjdaJ5H3Q8jRE.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/3D/3DGzy2DbfKpgjMSpfqIA5cbyBzduooPxtAMYx_zJetk.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/3D/3DGzy2DbfKpgjMSpfqIA5cbyBzduooPxtAMYx_zJetk.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/7Y/7Ysxx4pDMysR4eOkLP_2M7fBi8TSt5wPH05ZWChJwwc.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/7Y/7Ysxx4pDMysR4eOkLP_2M7fBi8TSt5wPH05ZWChJwwc.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/AE/AEdQ8X1Zm7yH4VW6YZXwvbmfDXtTcI5MP6yGxAkn7n8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/AE/AEdQ8X1Zm7yH4VW6YZXwvbmfDXtTcI5MP6yGxAkn7n8.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/AW/AWbDmZYk6Dnc0oLllxqN0QxrUR8fH3aPv0jxjsYM7oE.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/AW/AWbDmZYk6Dnc0oLllxqN0QxrUR8fH3aPv0jxjsYM7oE.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Bc/BcZAs42pHIprx4BVfMA6aITTBOeOmSC7T8s_5kxeObY.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Bc/BcZAs42pHIprx4BVfMA6aITTBOeOmSC7T8s_5kxeObY.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/OS/OS0-BQt3dHVxQP7sSi8-t57KtcsPA69Jp_P5vSXNceM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/OS/OS0-BQt3dHVxQP7sSi8-t57KtcsPA69Jp_P5vSXNceM.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Sh/Sh9j1o4nGefcqWv3D2FRokCiSdaE1X0LHk_JrLmhBKg.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Sh/Sh9j1o4nGefcqWv3D2FRokCiSdaE1X0LHk_JrLmhBKg.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/ZF/ZFUKK6Ye-yi1B_kzlzrYlDgv4HXGdAKVWKklnQuBQVU.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/ZF/ZFUKK6Ye-yi1B_kzlzrYlDgv4HXGdAKVWKklnQuBQVU.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/ao/aoA6KTGxAM_NsVwpPrFOmxTg9PXymoWGJ1EM2kegYoY.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/ao/aoA6KTGxAM_NsVwpPrFOmxTg9PXymoWGJ1EM2kegYoY.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/d4/d4pLtJ0ulY_w-K9yzq8g8r6XLK2AvPphFFYRYpIr9F4.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/d4/d4pLtJ0ulY_w-K9yzq8g8r6XLK2AvPphFFYRYpIr9F4.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/g6/g6BzY-Pv3GurM5H4Azwii_5KQmiXwsP8DskpD39NqSg.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/g6/g6BzY-Pv3GurM5H4Azwii_5KQmiXwsP8DskpD39NqSg.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/iw/iw2AwXxdDoN9r6dkPUss25u1umz7t6dMkS0EaISIBtA.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/iw/iw2AwXxdDoN9r6dkPUss25u1umz7t6dMkS0EaISIBtA.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/vo/voZovoWwv0OJn2dQwd8KUwHtpMhIc4wTl9ne1kaNqw8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/vo/voZovoWwv0OJn2dQwd8KUwHtpMhIc4wTl9ne1kaNqw8.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/x3/x3SlZFNrs8rq9bwhng-kSSJv4s2l4ebnuBnhyJdM5dg.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/x3/x3SlZFNrs8rq9bwhng-kSSJv4s2l4ebnuBnhyJdM5dg.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/7c/8b68e0411338a7" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/7c/8b68e0411338a7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/99/fe75ae80776d76" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/99/fe75ae80776d76" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/fe/edf51f1d820b00" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/fe/edf51f1d820b00" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/user_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/article_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/comment_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/poke_sprite_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/poke_type_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/01/e77e39dde83e96" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/01/e77e39dde83e96" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/28/44eef9a8263cc5" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/28/44eef9a8263cc5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/48/6902d1bdfa663b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/48/6902d1bdfa663b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/56/3c5d39689c96ed" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/56/3c5d39689c96ed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/61/2399eb204dba08" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/61/2399eb204dba08" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/9d/b51659ed7a65d0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/9d/b51659ed7a65d0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/b4/ab4ba0f888ef41" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/b4/ab4ba0f888ef41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/c6/b0f4c106d2ca76" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/c6/b0f4c106d2ca76" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/22f255c595bca7" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/22f255c595bca7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/7d8baf954f812c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/7d8baf954f812c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/fd/5723153d4ed5f6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/fd/5723153d4ed5f6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_1uz9wkjgk8ey9uu3pknn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_1yq52dnu12tabep0ku9r" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_275jm8roat3y0sddwx8w" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_2anv88x87ep7f08w64rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_2hy9liefvx42loq8ijlb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_2ue36creo4yz8pvkzjbv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_3g7g5bsgwnryc066i9ns" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_449oh9x6op3odg8gvgca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_47a6d8h2ty3ixy5cqnpo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_4j9xo70u6niug3hyrsj0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_55u8v94r2v8i2ymydxgf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_5iqjtz18u12wkm6vcnow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_5l5lnqo54hngk1wm91nc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_5xyulrxp6gknee6mcufg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_6cs12wjx13kch9n8k8tc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_78i0q9o7zarl95itnubm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_7hjhm02kv79pcmf5co18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_8965t64i0flsmjz5m1g5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_89zkeze6026yo2hot7jv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_8xb8n3eg2b7h30jzx4vw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_91kv6qz2i0e8oywfvhzd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_9cc3qp65l64bsafc66w1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_9syvjk4x1zjz9hr1fyl3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_a1do4xqf8rxgszmcrdg1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ay1jd1p1jhwey2f3xhp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_bnxth5h1pr551sl2mspe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_brkiwv2ux2gcjazfmfvq" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_bu9ds4gccppmho6w5b9u" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_c2g62dn7muvu26quhs7e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_cax3eekahp72ixilb0ky" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_cmdg5f528x1s965r7kvg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_d2omexeit2bdgs75do7f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_dl9o2kb4myf2yto2wdur" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_e9gtp52639wgx73bf680" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_fs34myrohcnfh7f5mm7h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_g4jgoe90wco3bw81qjnl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_hmfhqr08v51qb0sz3d0u" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ip1ueiymzsqdvfze0aga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ips7w5axylb30mltql3k" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_itqqgpqxum48k3fvcbx2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_jb2rz6zdb7ft1tlo4fdk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_k6aesplyki2nybm52lix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_l4vwbcxjrcq84d90pvjp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_m49prux24whmn7lf8li8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_mkvyhn0ntt5yba966l7e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_mky2edy1uwy2ewqtaeho" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_nw4b2lvrpjth6geqqdo4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_pou8gbu428muylefqv5j" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_q1afmfpx4ksrhp9aqep7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_qu8axo08sq4xlg724ens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_qxcgmvd8qv7yy54qarmf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_r3x5wc1c619nbw4io5lt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_r4w1cfw0n7jd8gavsv2t" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_rd8zduxg4hw38fw8eqou" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_sc2df7wg84527ib1uwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_si5q7y0l7zvaonbj2ml3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_sxzxh26csvwk1pd7hpbi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_tl56dk8hv0as05x7ziz8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_v0seai0nspbj9exh25ks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_v7v66ugijgp9nve4rr75" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_vjjfk964ubixxxduhg74" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_vke9js0wx8r35vodxe43" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_vu61mmrhqltm8qtlcuvq" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_wi76ybeblu5r3cjo6rs8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_xllnssdyw5z378ehohn0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ynnz1r1buqng12wrsir2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_yo8chfrmpew0g4jf6pnq" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_zrr51kfa5d7qkuvxdzoz" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +67,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="205mTMIHSQUuAYGoSpZDihQ5brN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -132,10 +91,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spec/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/models" />
+    </key>
   </component>
   <component name="RunManager" selected="Rails.Development: Trainee">
     <configuration name="Development: Trainee" type="RailsRunConfigurationType" factoryName="Rails">
@@ -249,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635342831694</updated>
-      <workItem from="1635342836517" duration="5042000" />
+      <workItem from="1635342836517" duration="11281000" />
     </task>
     <servers />
   </component>

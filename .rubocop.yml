@@ -4,8 +4,6 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
-    - 'lib/tasks/*'
-    - 'lib/seeds.rb'
     - 'script/**/*'
     - 'bin/*'
     - 'node_modules/**/*'
@@ -288,3 +286,11 @@ Performance/UriDefaultParser:
 
   Style/SlicingWithRange:
     Enabled: true
+
+  Metrics/BlockLength:
+    Enabled: false
+    IgnoredMethods: ['describe', 'context']
+    Exclude:
+      - 'Rakefile'
+      - '**/*.rake'
+      - 'test/**/*.rb'

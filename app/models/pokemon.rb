@@ -5,6 +5,8 @@ class Pokemon < ApplicationRecord
   has_many :poke_types
   has_many :poke_sprites
 
+  validates_presence_of :name, :pokedex_id
+
   def self.search(search)
     if search != "" && !search.nil?
       search.gsub!(/[,.!#&?]/, "")

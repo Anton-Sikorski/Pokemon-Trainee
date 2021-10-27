@@ -8,7 +8,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true
+  validates_presence_of :name, :role
+  validates :email, format: { with: /[a-z_.]+@[a-z_.-]+\.[a-z]+/ }
   has_many :articles
   has_many :comments
 
