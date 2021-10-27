@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# potentioal worker
+# potential worker
 class ViewCounterWorker
   include Sidekiq::Worker
 

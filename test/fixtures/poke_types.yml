@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+grass:
   pokemon: one
-  p_type: MyString
+  p_type: grass
+  created_at: <%= Time.zone.now %>
 
-two:
-  pokemon: two
+poison:
+  pokemon: poison
   p_type: MyString
+  created_at: <%= Time.zone.now %>

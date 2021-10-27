@@ -4,6 +4,7 @@
 class MainController < ApplicationController
   def index
     @users = User.all
+    @cols = PokeSprite.column_names
     @user = current_user
   end
 

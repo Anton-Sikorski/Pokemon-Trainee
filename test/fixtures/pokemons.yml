@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+Bulbasaur:
+  id: 1
+  name: Bulbasaur
   pokedex_id: 1
+  created_at: <%= Time.zone.now %>
 
-two:
-  name: MyString
-  pokedex_id: 1
+Eevee:
+  id: 133
+  name: Eevee
+  pokedex_id: 133
+  created_at: <%= Time.zone.now %>
