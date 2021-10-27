@@ -1,5 +1,6 @@
 require: rubocop-performance
 
+
 AllCops:
   Exclude:
     - 'db/**/*'
@@ -8,6 +9,14 @@ AllCops:
     - 'bin/*'
     - 'node_modules/**/*'
     - 'vendor/bundle/**/*' # For CI broken
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
@@ -287,10 +296,4 @@ Performance/UriDefaultParser:
   Style/SlicingWithRange:
     Enabled: true
 
-  Metrics/BlockLength:
-    Enabled: false
-    IgnoredMethods: ['describe', 'context']
-    Exclude:
-      - 'Rakefile'
-      - '**/*.rake'
-      - 'test/**/*.rb'
+

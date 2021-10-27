@@ -17,6 +17,8 @@ gem "sidekiq"
 
 gem "rubocop", require: false
 gem "rubocop-performance"
+gem "rubocop-rails"
+gem "rubocop-rspec"
 # gem 'rubocop-ci', git: 'https://github.com/ad2games/rubocop-ci'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.4", ">= 6.1.4.1"

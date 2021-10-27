@@ -5,60 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bbe69a-1cc0-4d15-a17f-ee329b9215ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.rspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/article_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/pokemon_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Trainee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Trainee.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/pokemon.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/pokemon.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/bin/webpack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/bin/webpack-dev-server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/spring.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/spring.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/article_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/comment_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/main_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/pokemon_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/pokemon_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/user_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/article_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/comment_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/poke_sprite_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/poke_type_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/01/e77e39dde83e96" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/01/e77e39dde83e96" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/28/44eef9a8263cc5" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/28/44eef9a8263cc5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/48/6902d1bdfa663b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/48/6902d1bdfa663b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/56/3c5d39689c96ed" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/56/3c5d39689c96ed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/61/2399eb204dba08" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/61/2399eb204dba08" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/9d/b51659ed7a65d0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/9d/b51659ed7a65d0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/b4/ab4ba0f888ef41" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/b4/ab4ba0f888ef41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/c6/b0f4c106d2ca76" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/c6/b0f4c106d2ca76" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/22f255c595bca7" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/22f255c595bca7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/7d8baf954f812c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/d7/7d8baf954f812c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/fd/5723153d4ed5f6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/fd/5723153d4ed5f6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635342831694</updated>
-      <workItem from="1635342836517" duration="11281000" />
+      <workItem from="1635342836517" duration="11605000" />
     </task>
     <servers />
   </component>
