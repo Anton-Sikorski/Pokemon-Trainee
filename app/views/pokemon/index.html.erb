@@ -17,11 +17,7 @@
           <% end %>
         </figure>
         <div class="pokemon-id">
-          <% case pokemon.pokedex_id.to_s.length
-               when 1 %><%= '#00' + pokemon.pokedex_id.to_s %>
-            <% when 2 %><%= '#0'  + pokemon.pokedex_id.to_s %>
-            <% when 3 %><%= '#'  + pokemon.pokedex_id.to_s %>
-          <% end %>
+          <%= format_pokedex_id(pokemon.pokedex_id.to_s) %>
         </div>
         <% pokemon.name[0] = pokemon.name[0].upcase  %>
         <div class="pokemon-name"><%= link_to pokemon.name, pokemon_path(pokemon) %></div>
@@ -33,7 +29,6 @@
       </div>
     <% end %>
   </div>
-
 
   <div>
     <%= paginate @pokemon %>

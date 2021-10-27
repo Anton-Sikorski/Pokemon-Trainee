@@ -6,7 +6,7 @@ class Pokemon < ApplicationRecord
   has_many :poke_sprites
 
   def self.search(search)
-    if search != ""
+    if search != "" && !search.nil?
       search.gsub!(/[,.!#&?]/, "")
       if num?(search)
         where(["pokedex_id = ?", search.gsub(/0+/, "")])
