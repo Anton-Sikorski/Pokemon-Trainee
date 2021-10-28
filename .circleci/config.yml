@@ -50,6 +50,7 @@ jobs:
           name: Schema load
           command: bundle exec rails db:schema:load --trace
       - ruby/rubocop-check
+      - ruby/rspec-test
 
 workflows:
   version: 2
