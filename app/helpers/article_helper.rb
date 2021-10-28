@@ -7,6 +7,6 @@ module ArticleHelper
   end
 
   def fit_text(text)
-    text.length > 500 ? text[0...500] + '....' : text
+    text.length > 500 ? "#{text[0...500]}...." : text
   end
 end
