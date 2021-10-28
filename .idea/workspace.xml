@@ -5,37 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bbe69a-1cc0-4d15-a17f-ee329b9215ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/controllers/main_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/fabricators/user_fabricator.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Trainee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Trainee.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/fabricators/article_fabricator.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/34/912ed54e14b77c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/34/912ed54e14b77c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/43/c0a2081b9e1b03" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/43/c0a2081b9e1b03" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/f9/f05c7d84563700" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/f9/f05c7d84563700" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/article_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/article_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/07/36505bdd8b82a0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/07/36505bdd8b82a0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_1cvaydcd0n230bx7y3rg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_38i35upn89vcs0nsvp09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_4x8490w9ik2qo4oibg3a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_5h2praziutkz21wdicou" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_6nrx3hytmj5bi9uifghr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_6vl17uojapdb1eexi6g6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_97jk8rfxcre3s40tixn0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_98g2vxsl0ysy6qxeo8z1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_cnv70ct7d5htm6eetnz1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_gzxsiddx6cvbftdcg23l" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ht2b3h0qehlsmbu49in8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ky6ewsxfaod2nkol2pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_mathf7wob5ruivmjt9tt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_ooladnhire46ft5cufp0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_q9om6jd9sb4elguw2pey" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_s7smb9dkowdmyxi7gbx7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_timers_t75pa9cd4a3gusu5yngu" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635342831694</updated>
       <workItem from="1635342836517" duration="12381000" />
-      <workItem from="1635416232904" duration="15578000" />
+      <workItem from="1635416232904" duration="17017000" />
     </task>
     <servers />
   </component>

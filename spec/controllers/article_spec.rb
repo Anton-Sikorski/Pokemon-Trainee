@@ -4,29 +4,29 @@ require "rails_helper"
 require_relative "../support/devise"
 
 RSpec.describe ArticlesController, type: :controller do
+  article2 = Fabricate(:article)
   describe "GET index" do
-    @article = Article.new(id: 1,
-                           title: "Article title",
-                           body: "A big amount of useful information",
-                           user_id: 1,
-                           created_at: Time.zone.now)
+    it "returns a successful response for index" do
+      get :index
+      expect(response.status).to be(200)
+    end
+  end
 
-    context "from logged in user" do
+  describe "GET #new" do
+    context "from authorized user" do
       login_user
-      it "returns a successful response for index" do
-        get :index
-        expect(response.status).to be(200)
-      end
-
       it "returns a successful response for new" do
         get :new
         expect(response).to have_http_status(:success)
       end
+    end
+  end
 
-      it "returns a successful response for new" do
-        get article_url(@article.id)
-        expect(response).to have_http_status(:success)
-      end
+  describe "GET #show" do
+    it "returns a successful response for new" do
+      params = { id: article2.id }
+      get :show, params: params
+      expect(response).to have_http_status(:success)
     end
   end
 end
