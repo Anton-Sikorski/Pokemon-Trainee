@@ -9,7 +9,7 @@ article_one:
 
 article_two:
   id: 2
-  title: Article title
+  title: Article
   body: A big amount of useful information
   user_id: 2
   created_at: <%= Time.zone.now %>

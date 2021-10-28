@@ -4,11 +4,13 @@
 class MainController < ApplicationController
   def index
     @users = User.all
-    @cols = PokeSprite.column_names
+    @cols = Comment.column_names
+    @count = Article.count
     @user = current_user
   end
 
   def show
     @user = User.find(params[:id])
+    @user = current_user
   end
 end
