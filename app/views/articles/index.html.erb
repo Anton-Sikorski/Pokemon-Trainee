@@ -3,11 +3,11 @@
     <% if !article.archived? || (user_signed_in? && current_user.admin?) %>
       <div class="article post-content background-style">
         <h2> <%= article.title %> </h2>
-        <span class="body"> <%= article.body[0..500] + "....." %> </span>
+        <span class="body"> <%= fit_text(article.body) %> </span>
           <p><%= link_to "to discussion...", article_path(article) %></p>
         <hr>
         <div class="description">
-          <p class="date"><%= article.created_at.strftime("%b %d %Y, %l:%M%P") %></p>
+          <p class="date"><%= format_time(article.created_at) %></p>
         </div>
       </div>
     <% end %>
