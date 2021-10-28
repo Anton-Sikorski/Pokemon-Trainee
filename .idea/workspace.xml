@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bbe69a-1cc0-4d15-a17f-ee329b9215ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/fabricators/article_fabricator.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/test.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/controllers/article_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/article_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/07/36505bdd8b82a0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/07/36505bdd8b82a0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/e9/d6258afe3e189f" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/e9/d6258afe3e189f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635342831694</updated>
       <workItem from="1635342836517" duration="12381000" />
-      <workItem from="1635416232904" duration="17017000" />
+      <workItem from="1635416232904" duration="17320000" />
     </task>
     <servers />
   </component>

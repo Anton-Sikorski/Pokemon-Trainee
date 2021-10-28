@@ -6465,3 +6465,167 @@ Processing by ArticlesController#show as HTML
   Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1634)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quo libero officiis odit."], ["body", "[\"Vero nobis ut. Eveniet laborum tempore. Asperiores dolor maiores.\", \"Quis totam saepe. Quod tempora dolorem. Quaerat praesentium reprehenderit.\", \"Molestiae et enim. Recusandae itaque suscipit. Temporibus iure maiores.\"]"], ["created_at", "2021-10-28 15:42:31.772203"], ["updated_at", "2021-10-28 15:42:31.778515"], ["user_id", 9]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 221)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 322)
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 6851)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1585)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1432)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Nam fugiat quia quas."], ["body", "[\"Commodi nostrum quo. Voluptas non sit. Non reprehenderit voluptas.\", \"Mollitia in maxime. Aspernatur sed sed. Saepe sed ipsam.\", \"Et sapiente officiis. Molestias vitae et. Occaecati eos odio.\"]"], ["created_at", "2021-10-28 15:42:35.086318"], ["updated_at", "2021-10-28 15:42:35.092656"], ["user_id", 9]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 221)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 322)
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 6851)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1585)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1432)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lauren@lehner-prosacco.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "lauren@lehner-prosacco.org"], ["encrypted_password", "$2a$04$Bt18eiYyCbThKt3OtqYDRu5MEDnO70ySigA6sHpo7gD/xuwC0h9ku"], ["created_at", "2021-10-23 15:43:10.696940"], ["updated_at", "2021-10-28 15:43:10.858322"], ["name", "Carrie McLaughlin"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Qui molestias quis quia."], ["body", "[\"Excepturi error fuga. Ut qui ducimus. Voluptatibus soluta perferendis.\", \"Et dolorum magnam. Ut placeat harum. Nisi voluptatum est.\", \"Totam qui et. Impedit labore nostrum. Dolore eum molestiae.\"]"], ["created_at", "2021-10-28 15:43:10.863284"], ["updated_at", "2021-10-28 15:43:10.868484"], ["user_id", 35]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 221)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 322)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 6806)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1418)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1431)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cathrine@mante.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "cathrine@mante.io"], ["encrypted_password", "$2a$04$9Afh5sUi0D63TOS.UFsXceun11Z6mWNzSZHk6LOwu86rgt0lLqLIa"], ["created_at", "2021-10-23 15:43:13.808887"], ["updated_at", "2021-10-28 15:43:13.971477"], ["name", "Pres. Glennie Goldner"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Dignissimos consequatur libero voluptates."], ["body", "[\"Cupiditate qui ut. Perspiciatis repudiandae et. Illum est qui.\", \"Ut voluptatem recusandae. Velit veritatis itaque. Labore fuga iusto.\", \"Cupiditate non officiis. Vitae placeat accusantium. Voluptatibus eaque cum.\"]"], ["created_at", "2021-10-28 15:43:13.978476"], ["updated_at", "2021-10-28 15:43:13.983659"], ["user_id", 36]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 221)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.4ms | Allocations: 322)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 6806)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1418)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 55)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 138)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1431)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
