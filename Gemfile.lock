@@ -89,9 +89,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
     erubi (1.10.0)
-    fabricator (0.0.5)
-      activesupport (>= 2.0.2)
-      rubigen (= 1.5.2)
+    fabrication (2.22.0)
     faker (2.19.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.4)
@@ -228,8 +226,6 @@ GEM
     rspec-support (3.10.2)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubigen (1.5.2)
-      activesupport (>= 2.2.2)
     rubocop (1.22.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -319,7 +315,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
-  fabricator
+  fabrication
   faker
   jbuilder (~> 2.7)
   kaminari

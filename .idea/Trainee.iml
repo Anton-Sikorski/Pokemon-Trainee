@@ -55,7 +55,7 @@
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.8.0, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.4.4, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, RVM: ruby-3.0.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="fabricator (v0.0.5, RVM: ruby-3.0.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fabrication (v2.22.0, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faker (v2.19.0, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.4, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.5.2, RVM: ruby-3.0.2) [gem]" level="application" />
@@ -114,7 +114,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v5.0.2, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.10.2, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec_junit_formatter (v0.4.1, RVM: ruby-3.0.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rubigen (v1.5.2, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.22.1, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-ast (v1.12.0, RVM: ruby-3.0.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-performance (v1.11.5, RVM: ruby-3.0.2) [gem]" level="application" />
@@ -165,6 +164,8 @@
         <option value="devise:controllers" />
         <option value="devise:install" />
         <option value="devise:views" />
+        <option value="fabrication:cucumber_steps" />
+        <option value="fabrication:model" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -233,6 +234,8 @@
         <option value="devise:controllers" />
         <option value="devise:install" />
         <option value="devise:views" />
+        <option value="fabrication:cucumber_steps" />
+        <option value="fabrication:model" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -475,8 +478,6 @@
           <RakeTaskImpl id="slurp">
             <subtasks>
               <RakeTaskImpl description="TODO" fullCommand="slurp:pokemon" id="pokemon" />
-              <RakeTaskImpl description="TODO" fullCommand="slurp:pokemon_sprites" id="pokemon_sprites" />
-              <RakeTaskImpl description="TODO" fullCommand="slurp:pokemon_types" id="pokemon_types" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="Run all specs in spec directory (excluding plugin specs)" fullCommand="spec" id="spec" />
