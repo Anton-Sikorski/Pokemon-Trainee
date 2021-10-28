@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="10" skipped="0" failures="0" errors="0" time="0.026008" timestamp="2021-10-28T14:07:03+03:00" hostname="wsa-235-72a">
+<properties>
+<property name="seed" value="51214"/>
+</properties>
+<testcase classname="spec.models.article_spec" name="Article Associations is expected to belong to user" file="./spec/models/article_spec.rb" time="0.012665"></testcase>
+<testcase classname="spec.models.article_spec" name="Article Validations is valid with valid arguments" file="./spec/models/article_spec.rb" time="0.001155"></testcase>
+<testcase classname="spec.models.pokemon_spec" name="Pokemon is valid with valid attributes" file="./spec/models/pokemon_spec.rb" time="0.000860"></testcase>
+<testcase classname="spec.models.pokemon_spec" name="Pokemon is not valid without name" file="./spec/models/pokemon_spec.rb" time="0.000662"></testcase>
+<testcase classname="spec.models.pokemon_spec" name="Pokemon is not valid without pokedex id" file="./spec/models/pokemon_spec.rb" time="0.000584"></testcase>
+<testcase classname="spec.models.user_spec" name="User Validations is valid with valid attributes" file="./spec/models/user_spec.rb" time="0.002457"></testcase>
+<testcase classname="spec.models.user_spec" name="User Validations is not valid without name" file="./spec/models/user_spec.rb" time="0.001217"></testcase>
+<testcase classname="spec.models.user_spec" name="User Validations is not valid without role" file="./spec/models/user_spec.rb" time="0.001206"></testcase>
+<testcase classname="spec.models.user_spec" name="User Validations is with has invalid email" file="./spec/models/user_spec.rb" time="0.001255"></testcase>
+<testcase classname="spec.models.user_spec" name="User Validations is is not valid without password" file="./spec/models/user_spec.rb" time="0.001061"></testcase>
+</testsuite>
