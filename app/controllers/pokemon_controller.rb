@@ -10,5 +10,6 @@ class PokemonController < ApplicationController
   def show
     @pokemon = Pokemon.find(params[:id])
     @sprites = @pokemon.poke_sprites[0]
+    @types = @pokemon.poke_types.map {|type| type.p_type}
   end
 end

@@ -3,4 +3,7 @@
   <%= image_tag @sprites['front']%>
   <%= image_tag @sprites['back']%>
   <%= image_tag @sprites['artwork']%>
+  <% @types.each do |type| %>
+    <p><%= type %></p>
+    <% end %>
 </div>
