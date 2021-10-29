@@ -4,19 +4,6 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.2"
-
-gem "devise"
-
-gem "pundit"
-
-gem "kaminari"
-
-gem "redis-rails"
-
-gem "sidekiq"
-
-gem "faker"
-
 gem "rubocop", require: false
 gem "rubocop-performance"
 gem "rubocop-rails"
@@ -25,10 +12,8 @@ gem "rubocop-rspec"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.4", ">= 6.1.4.1"
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.4.2'
-
+# gem 'postgres'
 gem "pg"
-
 # Use Puma as the app server
 gem "puma", "~> 5.0"
 # Use SCSS for stylesheets
@@ -57,8 +42,15 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "devise"
+  gem "faker"
+  gem "kaminari"
+  gem "pundit"
+  gem "redis-rails"
+  gem "reek"
   gem "rspec-rails"
   gem "shoulda-matchers"
+  gem "sidekiq"
 end
 
 group :development do

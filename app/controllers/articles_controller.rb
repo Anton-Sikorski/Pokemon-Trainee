@@ -15,7 +15,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     increase_views(@article)
     @users = User.all
-    # ViewCounterWorker.perform_async(@article)
   end
 
   def new

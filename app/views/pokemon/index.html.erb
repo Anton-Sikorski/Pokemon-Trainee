@@ -24,7 +24,7 @@
         </div>
 
         <div class="pokemon-name">
-          <%= link_to upcase_first_letter(pokemon.name), pokemon_path(pokemon), class: "link-style" %>
+          <%= link_to pokemon.name.capitalize, pokemon_path(pokemon), class: "link-style" %>
         </div>
 
         <div class="pokemon-type">

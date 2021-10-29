@@ -7,6 +7,6 @@ class Article < ApplicationRecord
   belongs_to :user, optional: true
   has_many :comments, dependent: :destroy
 
-  validates_presence_of :title, :body
+  validates :title, :body, presence: true
   validates :body, length: { minimum: 5 }
 end

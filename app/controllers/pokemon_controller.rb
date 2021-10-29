@@ -4,8 +4,7 @@
 class PokemonController < ApplicationController
   def index
     @pokemon = Pokemon.includes(:poke_sprites, :poke_types).search(params[:search]).page(params[:page])
-    # .search(params[:search]).page(params[:page])
-    # @pokemon = Pokemon.all.includes(:poke_sprites, :poke_types).page(params[:page])
+    LoadPokemonDb.perform_async
   end
 
   def show

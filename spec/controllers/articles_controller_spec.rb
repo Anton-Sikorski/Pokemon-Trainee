@@ -22,7 +22,7 @@ RSpec.describe ArticlesController, type: :controller do
   end
 
   describe "GET #new" do
-    context "from authorized user" do
+    context "with authorized user" do
       login_user
       it "returns a successful response for new" do
         get :new

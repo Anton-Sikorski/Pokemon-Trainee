@@ -13,13 +13,8 @@ module PokemonHelper
     end
   end
 
-  def upcase_first_letter(word)
-    word[0] = word[0].upcase
-    word
-  end
-
   def hinted_text_field_tag(name, value = nil, hint = "Click and enter text", options = {})
-    value = value.nil? ? hint : value
+    value = hint if value.nil?
     text_field_tag name, value,
                    { onclick: "if($(this).value == '#{hint}'){$(this).value = ''}",
                      onblur: "if($(this).value == ''){$(this).value = '#{hint}'}" }

@@ -28,6 +28,8 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   Max: 15
+  Exclude:
+    - 'app/workers/*.rb'
 
 # Prefer &&/|| over and/or.
 Style/AndOr:

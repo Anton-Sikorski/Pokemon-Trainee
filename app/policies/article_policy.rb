@@ -20,11 +20,11 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def update?
-    return true if user.present? && user == article.user || user.admin?
+    return true if (user.present? && user == article.user) || user.admin?
   end
 
   def destroy?
-    return true if user.present? && user == article.user || user.admin?
+    return true if (user.present? && user == article.user) || user.admin?
   end
 
   private

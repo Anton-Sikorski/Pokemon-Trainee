@@ -3,7 +3,7 @@
 # pokemon
 module CommentHelper
   def format_creation_time(creation_time)
-    time_diff = (Time.now - creation_time) / 60
+    time_diff = (Time.zone.now - creation_time) / 60
     case time_diff.round(0)
     when 0
       "Right now"
