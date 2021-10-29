@@ -38,17 +38,4 @@ RSpec.describe ArticlesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
-
-  describe "GET #edit" do
-    it "assigns requested order as order" do
-      new_article = Article.create! valid_article_attributes
-      get :edit, params: new_article.id
-      assigns(:article).should eq(new_article)
-    end
-  end
-
-  describe "POST #create" do
-    it "creates a new article" do
-    end
-  end
 end
