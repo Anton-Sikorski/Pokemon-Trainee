@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13bbe69a-1cc0-4d15-a17f-ee329b9215ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/helpers/pokemon_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/pokemon_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20211029085842_create_active_storage_tables.active_storage.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/4o/qh/4oqh48lgna59p3p0i2u8x7yze8qb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/7j/lf/7jlf4yh751fswdrmvv2qz52p8vt7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/cd/6r/cd6r7ucgfj409ipk0phfczfnmthk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/ef/lz/eflzr5rd75qzp4e02o63kxp9tgd4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/h8/bb/h8bbxcwb63nq8ch692ab8c2yrnon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/io/1e/io1e5ysfnhbuaep08hf0g5ivp1hb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/l9/bw/l9bwlmpccs2vy6yyt5yy4tft77m2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/user-default.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/user-images/user-default.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/v8/hc/v8hc0m0wz4sqpfd2g5rn8m3uoyks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/zf/65/zf651sxgb85tnqxq1hnbii48mqke" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/user_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/0c/71ade409473350" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/0c/71ade409473350" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/34/912ed54e14b77c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/34/912ed54e14b77c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/87/b267315c6bc5c2" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/87/b267315c6bc5c2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/9d/b51659ed7a65d0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/compile-cache/9d/b51659ed7a65d0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/miniprofiler/mp_views_127.0.0.1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/miniprofiler/mp_views_127.0.0.1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/helpers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,6 +75,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage" />
       <recent name="$PROJECT_DIR$/app/helpers" />
       <recent name="$PROJECT_DIR$/spec/controllers" />
       <recent name="$PROJECT_DIR$/spec/models" />
@@ -165,7 +195,7 @@
       <updated>1635342831694</updated>
       <workItem from="1635342836517" duration="12381000" />
       <workItem from="1635416232904" duration="19671000" />
-      <workItem from="1635487869476" duration="8386000" />
+      <workItem from="1635487869476" duration="12835000" />
     </task>
     <servers />
   </component>

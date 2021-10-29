@@ -30,7 +30,7 @@
       <div class="user-options">
         <% if user_signed_in? %>
           <div class="profile-data">
-            <span><strong><%= current_user.name %></strong></span>|
+            <span><strong><%= link_to current_user.name, main_path(current_user.id) %></strong></span>|
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           </div>
         <% else %>
