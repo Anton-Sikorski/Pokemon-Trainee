@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   validates_presence_of :name, :role
   validates :email, format: { with: /[a-z_.]+@[a-z_.-]+\.[a-z]+/ }
+  has_one_attached :avatar
   has_many :articles
   has_many :comments
 
