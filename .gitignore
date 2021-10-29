@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.gem
 *.rbc
 /.config
@@ -126,3 +127,7 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /public/uploads
+=======
+*.idea
+.idea/workspace.xml
+>>>>>>> c1474061 (add gitignore)
