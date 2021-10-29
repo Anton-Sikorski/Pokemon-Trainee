@@ -4,9 +4,6 @@
 class MainController < ApplicationController
   def index
     @users = User.all
-    @cols = Comment.column_names
-    @count = Article.count
-    @user = current_user
   end
 
   def show

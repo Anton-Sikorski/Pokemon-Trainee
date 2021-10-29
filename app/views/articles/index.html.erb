@@ -1,5 +1,19 @@
+<div class="article-menu">
+  <% if user_signed_in? %>
+    <div class="article-menu-style">
+      <span>Tell us a story: </span>
+      <button class="new-article-button">
+        <%= link_to "Go!", new_article_path %>
+      </button>
+    </div>
+  <% end %>
 
-  <% @articles.each do |article| %>
+   <div class="article-menu-style">
+    <span>Sort by: </span><%= select_tag "sort by", raw("<option>ascending views</option><option>descending views</option>") %>
+  </div>
+</div>
+
+<% @articles.sort_by { |article| article.views }.reverse.each do |article| %>
     <% if !article.archived? || (user_signed_in? && current_user.admin?) %>
       <div class="article post-content background-style">
         <h2> <%= article.title %> </h2>
@@ -7,15 +21,13 @@
           <p><%= link_to "to discussion...", article_path(article) %></p>
         <hr>
         <div class="description">
-          <p class="date"><%= format_time(article.created_at) %></p>
+          <div class="views">
+            <%= image_tag "eye.png", size: "15x15"%>
+            <span class="views-count"><%= article.views %></span>
+          </div>
+
+          <span class="date"><%= format_time(article.created_at) %></span>
         </div>
       </div>
     <% end %>
-  <% end %>
-
-
-<% if user_signed_in? %>
-    <button class="redirect">
-      <%= link_to "New Article", new_article_path %>
-    </button>
 <% end %>

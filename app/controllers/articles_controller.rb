@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    increase_views(@article)
     @users = User.all
     # ViewCounterWorker.perform_async(@article)
   end
@@ -53,6 +54,11 @@ class ArticlesController < ApplicationController
 
   private
 
+    def increase_views(article)
+      article.views += 1
+      article.save
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
@@ -61,6 +67,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :body, :status, :user_id, :article_id, :views)
+      params.require(:article).permit(:title, :body, :status, :user_id, :views)
     end
 end

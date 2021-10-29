@@ -20,12 +20,17 @@
     </div>
 
     <nav class="navigation">
-      <%= link_to "Pokedex", pokemon_index_path %>
-      <%= link_to "User list", main_index_path %>
+
+      <ul class="navbar">
+        <li><%= link_to "Blog", root_path %></li>
+        <li><%= link_to "Pokedex", pokemon_index_path %></li>
+        <li><%= link_to "User list", main_index_path %></li>
+      </ul>
+
       <div class="user-options">
         <% if user_signed_in? %>
           <div class="profile-data">
-            <span><strong><%= current_user.name %></strong></span>
+            <span><strong><%= current_user.name %></strong></span>|
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           </div>
         <% else %>
@@ -35,6 +40,7 @@
           </div>
         <% end %>
       </div>
+
     </nav>
   </header>
     <p class="notice"><%= notice %></p>

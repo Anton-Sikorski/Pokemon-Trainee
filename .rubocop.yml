@@ -16,6 +16,8 @@ Metrics/BlockLength:
     - '**/*.rake'
     - 'test/**/*.rb'
 
+Metrics/MethodLength:
+  Max: 15
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
