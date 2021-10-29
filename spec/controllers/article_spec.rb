@@ -4,8 +4,16 @@ require "rails_helper"
 require_relative "../support/devise"
 
 RSpec.describe ArticlesController, type: :controller do
-  user = Fabricate(:user, created_at: 5.days.ago)
-  article = Fabricate(:article, user_id: user.id)
+  def valid_article_attributes
+    { title: Faker::Lorem.sentence,
+      body: Faker::Lorem.paragraphs,
+      status: "public",
+      user_id: Fabricate(:user).id,
+      created_at: Time.zone.now }
+  end
+
+  user = Fabricate(:user)
+  article = Fabricate(:article, user_id: user.id, status: "public")
   describe "GET index" do
     it "returns a successful response for index" do
       get :index
@@ -28,6 +36,19 @@ RSpec.describe ArticlesController, type: :controller do
       params = { id: article.id }
       get :show, params: params
       expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET #edit" do
+    it "assigns requested order as order" do
+      new_article = Article.create! valid_article_attributes
+      get :edit, params: new_article.id
+      assigns(:article).should eq(new_article)
+    end
+  end
+
+  describe "POST #create" do
+    it "creates a new article" do
     end
   end
 end

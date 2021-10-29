@@ -9,7 +9,7 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: 'Anton', email: 'anton@mail.tu', password: '123456')
+User.create(name: 'Anton', email: 'anton@mail.tu', password: '123456', role: 1)
 User.create(name: 'Yulia', email: 'yulia@mail.tu', password: '123456')
 User.create(name: 'Maksim', email: 'maksim@mail.tu', password: '123456')
 
@@ -30,21 +30,19 @@ Article.create(title: 'Pokémon Platinum',
                user_id: 2, status: 'public')
 
 5.times do
-  Article.create(title: Faker::Lorem.sentence,
-                 body: Faker::Lorem.paragraphs.join(" "),
+  Article.create(title: Faker::Lorem.sentence(word_count: rand(2..7)),
+                 body: Faker::Lorem.paragraphs(number: rand(4..10)).join(" "),
                  user_id: rand(8) + 1,
-                 status: 'public'
+                 status: 'public',
+                 created_at: rand(0..48).hours.ago
   )
 end
 
-5.times do
+25.times do
   Comment.create(body: Faker::Lorem.sentences.join(" "),
                  user_id: rand(8) + 1,
                  status: 'public',
-                 article_id: rand(8) + 1
+                 article_id: rand(8) + 1,
+                 created_at: rand(0..48).hours.ago
   )
 end
-
-
-
-

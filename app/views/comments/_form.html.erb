@@ -1,10 +1,7 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
+  <div class="body"><%= form.text_area :body %></div>
   <% if current_user.admin? %>
-    <div>
+    <div class="privacy">
       <%= form.label :status %><br>
       <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
     </div>

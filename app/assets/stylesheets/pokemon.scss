@@ -9,6 +9,14 @@
   color: #444;
 }
 
+.search-form{
+  margin-left: auto;
+  padding: 0.5em 0;
+  #search{
+    width: 20vw;
+  }
+}
+
 .pokemon-card {
   background-color: #fff;
   color: #2967a9;
@@ -25,6 +33,18 @@
 .pokemon-name{
   display: flex;
   justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited{
+    color: black;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
 }
 
 .pokemon-sprite{
@@ -61,11 +81,24 @@
 .pagination-prev , .pagination-next {
   span{
     margin: 0 1em;
+    padding: 0.3em;
   }
 
   span:hover{
     background-color: #33c0bf;
     border-radius: 0.3em;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited{
+    color: black;
+  }
+
+  a:hover{
+    text-decoration: underline;
   }
 }
 
@@ -85,6 +118,18 @@
 
   .page:hover{
     background-color: #33c0bf;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited{
+    color: black;
+  }
+
+  a:hover{
+    text-decoration: underline;
   }
 }
 
