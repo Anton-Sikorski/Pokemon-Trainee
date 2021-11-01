@@ -17,4 +17,11 @@ class User < ApplicationRecord
   def admin?
     role == 1
   end
+
+  def default_avatar
+    return if avatar.attached?
+
+    avatar.attach(io: File.open("storage/user-images/user-default.jpeg"),
+                  filename: "file.pdf")
+  end
 end
