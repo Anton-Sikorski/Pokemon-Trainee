@@ -19,9 +19,9 @@ class User < ApplicationRecord
   end
 
   def default_avatar
-    unless avatar.attached?
-      avatar.attach(io: File.open("storage/user-images/user-default.jpeg"),
-                    filename: "file.pdf")
-    end
+    return if avatar.attached?
+
+    avatar.attach(io: File.open("storage/user-images/user-default.jpeg"),
+                  filename: "file.pdf")
   end
 end

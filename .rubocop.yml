@@ -31,6 +31,10 @@ Metrics/MethodLength:
   Exclude:
     - 'app/workers/*.rb'
 
+Metrics/AbcSize:
+  Exclude:
+    - 'app/workers/*.rb'
+
 # Prefer &&/|| over and/or.
 Style/AndOr:
   Enabled: true
