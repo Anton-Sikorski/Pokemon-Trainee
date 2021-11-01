@@ -2,8 +2,6 @@
 
 # devise extendable controller
 class UserController < ApplicationController
-  def upload; end
-
   private
 
     def sign_up_params

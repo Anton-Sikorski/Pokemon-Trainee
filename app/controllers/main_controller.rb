@@ -4,7 +4,6 @@
 class MainController < ApplicationController
   def index
     @users = User.all
-    @users.each(&:default_avatar)
   end
 
   def show
