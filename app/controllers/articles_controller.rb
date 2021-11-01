@@ -8,7 +8,6 @@ class ArticlesController < ApplicationController
     @user = current_user
     @articles = Article.all
     authorize @articles
-    @pokemon = Pokemon.all
   end
 
   def show

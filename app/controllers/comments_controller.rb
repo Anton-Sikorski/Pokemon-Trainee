@@ -2,7 +2,7 @@
 
 # comments
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[update destroy]
+  before_action :set_comment, only: %i[destroy]
 
   def create
     @article = Article.find(params[:article_id])
@@ -15,8 +15,6 @@ class CommentsController < ApplicationController
       redirect_to article_path(@article), alert: "Comment was not created"
     end
   end
-
-  def update; end
 
   def destroy
     @article = Article.find(params[:article_id])

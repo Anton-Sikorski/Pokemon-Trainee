@@ -8,11 +8,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates_presence_of :name, :role
-  validates :email, format: { with: /[a-z_.]+@[a-z_.-]+\.[a-z]+/ }
+  before_validation :default_avatar, on: %i[create edit]
+  validates :name, :role, presence: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   has_one_attached :avatar
-  has_many :articles
-  has_many :comments
+  has_many :articles, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def admin?
     role == 1
