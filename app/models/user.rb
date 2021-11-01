@@ -2,9 +2,7 @@
 
 # devise user model
 class User < ApplicationRecord
-  enum roles: %i[user admin]
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  enum role: { user: 0, admin: 1 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -15,14 +13,12 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  def admin?
-    role == 1
-  end
+  private
 
-  def default_avatar
-    return if avatar.attached?
+    def default_avatar
+      return if avatar.attached?
 
-    avatar.attach(io: File.open("storage/user-images/user-default.jpeg"),
-                  filename: "file.pdf")
-  end
+      avatar.attach(io: File.open("user-images/user-default.jpeg"),
+                    filename: "file.pdf")
+    end
 end

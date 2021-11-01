@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   include Pundit
+  # with the use of authorise method, instance of the selected class becomes
+  # connected to the appropriate policy. In policy we have rules for each
+  # controller action, which determine scope and actions allowed to the user.
 
   protected
 
