@@ -46,11 +46,13 @@ group :development, :test do
   gem "faker"
   gem "pagy"
   gem "pundit"
+  gem "ransack"
   gem "redis-rails"
   gem "reek"
   gem "rspec-rails"
   gem "shoulda-matchers"
   gem "sidekiq"
+  gem "sidekiq-unique-jobs"
 end
 
 group :development do

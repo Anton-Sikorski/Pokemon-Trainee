@@ -3,9 +3,10 @@
 # pokemonDB
 class PokemonController < ApplicationController
   def index
-    @pagy, @pokemon = pagy(Pokemon.includes(:poke_sprites, :poke_types)
-                                  .search(params[:search]), size: [1, 2, 2, 1], items: 25)
-    LoadPokemonDb.perform_async if Pokemon.all.empty? # loads pokemon db on first encounter
+    @search = Pokemon.ransack(params[:q])
+    @pagy, @pokemon = pagy(@search.result.order("pokedex_id ASC")
+                                  .includes(:poke_sprites, :poke_types),
+                           size: [1, 2, 2, 1], items: 25)
   end
 
   def show
