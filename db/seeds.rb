@@ -8,7 +8,7 @@ require 'faker'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+LoadPokemonDb.perform_async if Pokemon.all.empty? # loads pokemon db on first encounter
 User.create(name: 'Anton', email: 'anton@mail.tu', password: '123456', role: 1)
 User.create(name: 'Yulia', email: 'yulia@mail.tu', password: '123456')
 User.create(name: 'Maksim', email: 'maksim@mail.tu', password: '123456')
