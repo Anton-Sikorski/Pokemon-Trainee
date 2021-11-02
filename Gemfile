@@ -63,11 +63,17 @@ group :development, :test do
   gem "faker"
   gem "pagy"
   gem "pundit"
+  gem "ransack"
   gem "redis-rails"
   gem "reek"
 >>>>>>> e7ee9173... install pagy. uninstall kaminari
   gem "rspec-rails"
   gem "shoulda-matchers"
+<<<<<<< HEAD
+=======
+  gem "sidekiq"
+  gem "sidekiq-unique-jobs"
+>>>>>>> d5bec4eb... pokemon db population begins with server initialization. Ransack add
 end
 
 group :development do

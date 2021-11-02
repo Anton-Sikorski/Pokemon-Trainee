@@ -1,9 +1,16 @@
 <div class="search-container background-style">
   <div class="search-form">
-    <%= form_with(url: '/pokemon', method: 'get', local: true) do %>
-      <%= hinted_text_field_tag :textfield, params[:search], "Looking for someone?" %>
-      <%= submit_tag "Search" %>
+
+    <%= search_form_for @search, url: pokemon_index_path do |f| %>
+      <!-- Search if the name field contains... -->
+      <%= f.label "Name"%>
+      <%= f.search_field :name_cont, placeholder: "Enter pokemon name" %>
+
+      <%= f.submit %>
+      <%= link_to "Clear", request.path %>
     <% end %>
+
+    <span>Sort by </span><%= sort_link( @search, :name) %> initialization. Ransack add
   </div>
 
   <% if @pokemon.empty? %>

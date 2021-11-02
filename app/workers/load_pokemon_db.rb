@@ -3,7 +3,8 @@
 # worker, which populates Pokemon DB
 class LoadPokemonDb
   include Sidekiq::Worker
-  sidekiq_options retry: false
+  sidekiq_options lock: :until_executed,
+                  on_conflict: :reject
   def perform
     return unless Pokemon.all.empty?
 
