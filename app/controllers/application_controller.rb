@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-
+  include Pagy::Backend
   include Pundit
   # with the use of authorise method, instance of the selected class becomes
   # connected to the appropriate policy. In policy we have rules for each

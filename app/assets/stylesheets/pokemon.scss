@@ -76,60 +76,65 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
-}
 
-.pagination-prev , .pagination-next {
-  span{
-    margin: 0 1em;
-    padding: 0.3em;
+  .prev , .next {
+    span{
+      margin: 0 1em;
+      padding: 0.3em;
+    }
+
+    span:hover{
+      background-color: #33c0bf;
+      border-radius: 0.3em;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:visited{
+      color: black;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
   }
 
-  span:hover{
-    background-color: #33c0bf;
-    border-radius: 0.3em;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited{
-    color: black;
-  }
-
-  a:hover{
-    text-decoration: underline;
-  }
-}
-
-.pagination-pages{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  .page{
-    border: 0.5px solid black;
-    border-radius: 0.3em;
-    margin: 0 0.5em;
-    width: 1.5em;
+  .pages{
     display: flex;
-    justify-content: center;
-  }
+    flex-direction: row;
+    justify-content: space-around;
 
-  .page:hover{
-    background-color: #33c0bf;
-  }
+    .page{
+      border: 0.5px solid black;
+      border-radius: 0.3em;
+      margin: 0 0.5em;
+      width: 1.5em;
+      display: flex;
+      justify-content: center;
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited{
-    color: black;
-  }
+    }
 
-  a:hover{
-    text-decoration: underline;
+    .page:hover{
+      background-color: #33c0bf;
+    }
+
+    .gap:hover, .active:hover{
+      background-color: #66ccff;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:visited{
+      color: black;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
   }
 }
 
