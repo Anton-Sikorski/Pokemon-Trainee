@@ -6,7 +6,8 @@ class ArticlesController < ApplicationController
 
   def index
     @user = current_user
-    @articles = Article.all
+    @search = Article.ransack(params[:q])
+    @articles = @search.result.order("views ASC")
     authorize @articles
   end
 
