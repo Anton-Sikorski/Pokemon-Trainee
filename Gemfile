@@ -57,6 +57,15 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+<<<<<<< HEAD
+=======
+  gem "devise"
+  gem "faker"
+  gem "pagy"
+  gem "pundit"
+  gem "redis-rails"
+  gem "reek"
+>>>>>>> e7ee9173... install pagy. uninstall kaminari
   gem "rspec-rails"
   gem "shoulda-matchers"
 end
