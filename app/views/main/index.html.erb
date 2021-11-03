@@ -1,5 +1,6 @@
 <div class="background-style">
   <%= @time %>
+  <%= @cols %>
   <% @users.each do |user| %>
     <div><%= user.name%></div>
     <%= image_tag user.avatar, size: "40x40" %>

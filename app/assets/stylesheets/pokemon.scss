@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .wrapper {
   display: grid;
-  grid-template-columns:  12vw 12vw 12vw 12vw 12vw;
+  grid-template-columns:  10vw 10vw 10vw 10vw 10vw;
   grid-gap: 1vw;
-  background-color: #fff;
   color: #444;
+  margin: 0.5em;
+  justify-content: center
 }
 
 .search-form{
@@ -21,7 +22,7 @@
   background-color: #fff;
   color: #2967a9;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0.3em;
 }
 
 .pokemon-id{
@@ -61,11 +62,11 @@
 
   .type{
     border-radius: 1vh;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     text-align: center;
     padding: 0.1em 0.3em ;
-    margin: 0.5em;
+    margin: 0.1em;
   }
 }
 

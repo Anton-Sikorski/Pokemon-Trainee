@@ -53,7 +53,12 @@ main{
     margin: 0 15vw;
 
   .content{
-    min-width: 65vw;
+    min-width: 60vw;
+  }
+  .sidebar{
+    max-height: 10vh;
+    top: 0.5em;
+    position: sticky;
   }
 }
 

@@ -3,6 +3,7 @@
 # controller for user model
 class MainController < ApplicationController
   def index
+    @cols = User.column_names
     @time = time { @users = User.all } # loads each attachment separately. don't know howto fix it.
     # includes avatar_attachment doesn't make any difference. with_image_attachment either
   end

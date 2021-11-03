@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# pokemon
+# helper to upgrade pokemon view
 module PokemonHelper
   include Pagy::Frontend
 

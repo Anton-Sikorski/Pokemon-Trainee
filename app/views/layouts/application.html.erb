@@ -12,36 +12,7 @@
 
   <body>
   <header>
-    <div class="logo-container">
-      <%= link_to '', root_path %>
-      <figure class="logo">
-        <%= image_tag("second.png", size: "70x50", alt: 'Logo') %>
-      </figure>
-    </div>
-
-    <nav class="navigation">
-
-      <ul class="navbar">
-        <li><%= link_to "Blog", root_path %></li>
-        <li><%= link_to "Pokedex", pokemon_index_path %></li>
-        <li><%= link_to "User list", main_index_path %></li>
-      </ul>
-
-      <div class="user-options">
-        <% if user_signed_in? %>
-          <div class="profile-data">
-            <span><strong><%= link_to current_user.name, main_path(current_user.id) %></strong></span>|
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-          </div>
-        <% else %>
-          <div>
-            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-          </div>
-        <% end %>
-      </div>
-
-    </nav>
+    <%= render "layouts/partials/header" %>
   </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -49,6 +20,11 @@
     <div class="content">
       <%= yield %>
     </div>
+    <% unless user_signed_in? || controller_name == "registrations" || controller_name == "sessions" %>
+      <div class="sidebar">
+        <%= render "devise/sessions/new" %>
+      </div>
+    <% end %>
   </main>
 
   </body>
