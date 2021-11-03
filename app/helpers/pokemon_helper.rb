@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# pokemon
+# helper to upgrade pokemon view
 module PokemonHelper
   include Pagy::Frontend
 
@@ -47,13 +47,17 @@ module PokemonHelper
     end
   end
 
-  def upcase_first_letter(word)
-    word[0] = word[0].upcase
-    word
+  def clean_name(name)
+    name.match(/[a-zA-Z]+/).to_s.capitalize
+  end
+
+  def convert_attr(value)
+    "#{value.to_i / 10}." + "#{value % 10}"
   end
 
   def hinted_text_field_tag(name, value = nil, hint = "Click and enter text", options = {})
-    value = value.nil? ? hint : value
+    value = hint if value.nil?
+>>>>>>> 516d56b9... edit stylesheet for registration. add sidebar. add partials. edit helper
     text_field_tag name, value,
                    { onclick: "if($(this).value == '#{hint}'){$(this).value = ''}",
                      onblur: "if($(this).value == ''){$(this).value = '#{hint}'}" }

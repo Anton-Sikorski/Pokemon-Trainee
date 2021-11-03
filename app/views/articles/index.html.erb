@@ -8,9 +8,11 @@
     </div>
   <% end %>
 
-   <div class="article-menu-style">
-    <span>Sort by: </span><%= select_tag "sort by", raw("<option>ascending views</option><option>descending views</option>") %>
+  <div>
+    <span>Sort by:</span>
+    <span id="link"><%= sort_link( @search, :views) %></span>
   </div>
+
 </div>
 
 <% @articles.sort_by { |article| article.views }.reverse.each do |article| %>

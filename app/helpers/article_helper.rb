@@ -6,7 +6,15 @@ module ArticleHelper
     time.strftime("%b %d %Y, %l:%M%P")
   end
 
-  def fit_text(text)
-    text.length > 500 ? "#{text[0...500]}...." : text
+  def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
   end
 end

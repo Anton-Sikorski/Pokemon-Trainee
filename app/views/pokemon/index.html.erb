@@ -1,18 +1,27 @@
-<div class="search-container background-style">
+<div class="search-container">
   <div class="search-form">
+    <div>
+      <%= search_form_for @search, url: pokemon_index_path do |f| %>
+        <!-- Search if the name field contains... -->
+        <%= f.search_field :name_cont, placeholder: "Enter pokemon name" %>
+        <%= f.submit %>
 
-    <%= search_form_for @search, url: pokemon_index_path do |f| %>
-      <!-- Search if the name field contains... -->
-      <%= f.label "Name"%>
-      <%= f.search_field :name_cont, placeholder: "Enter pokemon name" %>
+      <% end %>
+    </div>
 
-      <%= f.submit %>
+    <div id="link">
+      <span>Sort by:</span>
+      <%= sort_link( @search, :name) %>
+      <%= sort_link( @search, :pokedex_id) %>
+    </div>
+
+    <div id="link">
       <%= link_to "Clear", request.path %>
-    <% end %>
-
-    <span>Sort by </span><%= sort_link( @search, :name) %> initialization. Ransack add
+    </div>
   </div>
+</div>
 
+<div class="pokemon-container background-style">
   <% if @pokemon.empty? %>
     <div class="background-style">No results</div>
   <% end %>

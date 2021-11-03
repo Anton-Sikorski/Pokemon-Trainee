@@ -3,6 +3,6 @@
   <% @users.each do |user| %>
     <div><%= user.name%></div>
     <%= image_tag user.avatar, size: "40x40" %>
-    <%= link_to "To #{user.name}'s' profile", main_path(user) %>
+    <span id="link"><%= link_to "To #{user.name}'s profile", main_path(user) %></span>
   <% end %>
 </div>

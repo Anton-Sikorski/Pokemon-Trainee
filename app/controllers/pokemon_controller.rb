@@ -13,5 +13,7 @@ class PokemonController < ApplicationController
     @pokemon = Pokemon.find(params[:id])
     @sprites = @pokemon.poke_sprites[0]
     @types = @pokemon.poke_types.map(&:p_type)
+    @next = Pokemon.find_by(id: @pokemon.id + 1)
+    @prev = Pokemon.find_by(id: @pokemon.id - 1)
   end
 end

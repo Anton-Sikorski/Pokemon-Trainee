@@ -3,11 +3,14 @@
 # authorized articles
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  rescue_from ActiveRecord::RecordNotFound do
+    render :not_found
+  end
 
   def index
     @user = current_user
     @search = Article.ransack(params[:q])
-    @articles = @search.result.order("views ASC")
+    @articles = @search.result
     authorize @articles
   end
 
