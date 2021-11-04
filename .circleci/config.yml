@@ -39,12 +39,23 @@ jobs:
       - checkout
       - run:
           name: Wait for PG
-          command: dockerize -wait tcp://localhost:5432 -timeout 2m
+          command: dockerize -wait tcp://localhost:5432 -timeout 30s
+      - run:
+          name: install redis
+          command: |
+            pushd /tmp
+            wget http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz
+            tar xzf redis-$REDIS_VERSION.tar.gz
+            cd redis-$REDIS_VERSION && make
+            src/redis-server --daemonize yes
+            popd
+          environment:
+            REDIS_VERSION: 3.2.10
 
       - run:
           name: Wait for Redis
           command: |
-            dockerize -wait tcp://localhost:6379 -timeout 2m
+            dockerize -wait tcp://localhost:6379 -timeout 30s
 
       - ruby/install-deps
       - node/install-packages:
