@@ -1,0 +1,21 @@
+<div class="comment">
+  <span class="user-name">
+    <% user = @users.find_by(id: comment.user_id) %>
+    <%= user.name %>
+  </span>
+
+  <span>
+    <%= format_creation_time(comment.created_at) %>
+  </span>
+
+  <p class="comment-body"> <%= comment.body %> </p>
+  <p>
+    <% if user_signed_in? %>
+      <% if current_user.id == comment.user_id || current_user.admin?%>
+        <%= link_to 'Destroy Comment', [comment.article, comment],
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+      <% end %>
+    <% end %>
+  </p>
+</div>

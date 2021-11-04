@@ -1,0 +1,14 @@
+<div class="profile background-style">
+  <div class="avatar">
+    <%= image_tag @user.avatar, size: "40x40" %>
+  </div>
+  <div class="data">
+    <p class="name"><%= @user.name %></p>
+    <p class="email"><%= @user.email %></p>
+    <% if @user == current_user %>
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+    <% end %>
+    <p class="registration-date"><%= format_time(@user.created_at) %></p>
+  </div>
+
+ </div>
