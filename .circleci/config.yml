@@ -8,6 +8,7 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:3.0.2-node
+      - image: redis
     steps:
       - checkout
       - ruby/install-deps
