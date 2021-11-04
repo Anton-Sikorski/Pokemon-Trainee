@@ -37,10 +37,24 @@ jobs:
       RAILS_ENV: test
     steps:
       - checkout
+      - run:
+          name: Wait for PG
+          command: dockerize -wait tcp://localhost:5432 -timeout 2m
+
+      - run:
+          name: Wait for Redis
+          command: |
+            dockerize -wait tcp://localhost:6379 -timeout 2m
+
       - ruby/install-deps
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
+      - run:
+         name: Install Redis Tools
+         command: |
+            sudo apt-get install redis-tools ; while ! redis-cli ping 2>/dev/null ; do sleep 1 ; done
+
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
