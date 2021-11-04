@@ -1,0 +1,39 @@
+<div class="article background-style">
+  <div class="post-content ">
+    <h1 class="title"><%= @article.title %></h1>
+    <p class="body"><%= @article.body %></p>
+    <div class="description">
+      <%= image_tag "eye.png", size: "15x15"%>
+      <span class="views"><%= @article.views %></span>
+      <span class="user-name">by <%=  @users.find_by(id: @article.user_id).name %>, </span>
+      <span class="created-at"><%= @article.created_at.strftime("%b %d %Y, %l:%M%P") %></span>
+    </div>
+    <hr>
+
+    <div class="edit">
+      <% if user_signed_in? %>
+        <% if current_user.id == @article.user_id  || current_user.admin?%>
+          <%= link_to "Edit", edit_article_path(@article) %>
+          <%= link_to "Destroy", article_path(@article),
+                          method: :delete,
+                          data: { confirm: "Are you sure?" } %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <h2>Comments</h2>
+  <div class="comment-list">
+    <% if @article.comments.empty? %>
+      <span>No comments yet</span>
+    <% else %>
+      <%= render @article.comments  %>
+    <% end %>
+  </div>
+  <div class="comment-new">
+    <% if user_signed_in? %>
+      <h2>Add a comment:</h2>
+      <%= render 'comments/form' %>
+    <% end %>
+  </div>
+</div>

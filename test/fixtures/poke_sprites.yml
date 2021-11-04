@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bulbasaur_sprite:
+  id: 1
+  pokemon_id: 1
+  created_at: <%= Time.zone.now %>
+  front: MyString
+  back: MyString
+  artwork: MyString
+
+eevee_sprite:
+  id: 2
+  pokemon_id: 133
+  created_at: <%= Time.zone.now %>
+  front: MyString
+  back: MyString
+  artwork: MyString
