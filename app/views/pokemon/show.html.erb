@@ -1,14 +1,17 @@
 <% data_path = JSON.parse(Net::HTTP.get(URI("https://pokeapi.co/api/v2/pokemon/#{@pokemon.pokedex_id}"))) %>
 <div class="show-path">
-  <% unless @prev.nil? %>
-    <span id="link"><%= link_to clean_name(@prev.name), pokemon_path(@prev.id) %></span>
+  <% if @prev.nil?%>
+      <span id="link"></span>
+    <% else %>
+      <span id="link"><%= link_to clean_name(@prev.name), pokemon_path(@prev.id) %></span>
   <% end %>
   <h1><%= clean_name(@pokemon.name) %></h1>
-  <% unless @next.nil? %>
-    <span id="link"><%= link_to clean_name(@next.name), pokemon_path(@next.id) %></span>
+  <% if @next.nil?%>
+      <span id="link"></span>
+    <% else %>
+      <span id="link"><%= link_to clean_name(@next.name), pokemon_path(@next.id) %></span>
   <% end %>
 </div>
-
 <div class="pokemon-page background-style">
   <div>
     <figure class="artwork">

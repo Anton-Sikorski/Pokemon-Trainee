@@ -12,30 +12,41 @@ RSpec.describe ArticlesController, type: :controller do
       created_at: Time.zone.now }
   end
 
-  user = Fabricate(:user)
+  user = Fabricate(:user, role: "user")
   article = Fabricate(:article, user_id: user.id, status: "public")
-  describe "GET index" do
-    it "returns a successful response for index" do
-      get :index
-      expect(response.status).to be(200)
+  params = { id: article.id }
+
+  shared_examples "response test" do
+    it "when user signed in returns successful responce" do
+      sign_in user
+      get url, params: params
+      expect(response.status).to eq(200)
     end
   end
 
-  describe "GET #new" do
-    context "from authorized user" do
-      login_user
-      it "returns a successful response for new" do
-        get :new
-        expect(response).to have_http_status(:success)
+  context "with GET" do
+    describe "index" do
+      include_examples "response test" do
+        let(:url) { :index }
       end
     end
-  end
 
-  describe "GET #show" do
-    it "returns a successful response for new" do
-      params = { id: article.id }
-      get :show, params: params
-      expect(response).to have_http_status(:success)
+    describe "#new" do
+      include_examples "response test" do
+        let(:url) { :new }
+      end
+    end
+
+    describe "#edit" do
+      include_examples "response test" do
+        let(:url) { :edit }
+      end
+    end
+
+    describe "#show" do
+      include_examples "response test" do
+        let(:url) { :show }
+      end
     end
   end
 end

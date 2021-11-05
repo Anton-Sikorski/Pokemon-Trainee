@@ -48,7 +48,8 @@ module PokemonHelper
   end
 
   def clean_name(name)
-    name.match(/[a-zA-Z]+/).to_s.capitalize
+    name = name.gsub(/-/," ") if 'Mr' == name.match(/[a-zA-Z]+/).to_s.capitalize
+    name.match(/[a-zA-Z\s]+/).to_s.capitalize
   end
 
   def convert_attr(value)
