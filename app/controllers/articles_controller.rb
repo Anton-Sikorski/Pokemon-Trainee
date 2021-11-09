@@ -8,10 +8,8 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @user = current_user
     @search = Article.ransack(params[:q])
     @articles = @search.result
-    authorize @articles
   end
 
   def show

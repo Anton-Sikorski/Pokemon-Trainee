@@ -1,11 +1,19 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <div class="body"><%= form.text_area :body %></div>
+  <div class="body">
+    <%= form.text_area :body, placeholder: "Make some content" %>
+    <% comment =  @article.comments[@article.comments.size - 1] %>
+    <% comment.errors.full_messages_for(:body).each do |message| %>
+      <div class="errors"><%= message %></div>
+    <% end %>
+  </div>
+
   <% if current_user.admin? %>
     <div class="privacy">
       <%= form.label :status %><br>
-      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+      <%= form.select :status, %w[public private archived], selected: 'public' %>
     </div>
   <% end %>
+  
   <p>
     <%= form.submit %>
   </p>

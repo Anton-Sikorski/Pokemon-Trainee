@@ -112,4 +112,11 @@ main{
     min-height: 3em;
 }
 
-
+.errors{
+  padding: 0.1em 1em;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(255, 0, 0, 0.88);
+  border-radius: 0.3em;
+  font-size: 14px;
+}

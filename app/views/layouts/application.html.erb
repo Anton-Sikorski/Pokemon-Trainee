@@ -21,7 +21,7 @@
       <%= yield %>
     </div>
     <% unless user_signed_in? || controller_name == "registrations" || controller_name == "sessions" %>
-      <sidebar id="sidebar" class="sidebar">
+      <sidebar class="sidebar">
         <%= render "devise/sessions/new" %>
       </sidebar>
     <% end %>
@@ -29,4 +29,3 @@
 
   </body>
 </html>
-<%= javascript_pack_tag "pokemon" %>
