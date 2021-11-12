@@ -16,7 +16,7 @@ RSpec.describe ArticlesController, type: :controller do
       created_at: Time.zone.now }
   end
 
-  shared_examples "response test" do
+  shared_examples "authenticated user response test" do
     it "returns successful responce when user signed in" do
       sign_in user
       get url, params: params
@@ -26,25 +26,25 @@ RSpec.describe ArticlesController, type: :controller do
 
   describe "Authenticated user activities" do
     describe "#index" do
-      include_examples "response test" do
+      include_examples "authenticated user response test" do
         let(:url) { :index }
       end
     end
 
     describe "#new" do
-      include_examples "response test" do
+      include_examples "authenticated user response test" do
         let(:url) { :new }
       end
     end
 
     describe "#edit" do
-      include_examples "response test" do
+      include_examples "authenticated user response test" do
         let(:url) { :edit }
       end
     end
 
     describe "#show" do
-      include_examples "response test" do
+      include_examples "authenticated user response test" do
         let(:url) { :show }
       end
     end
@@ -81,10 +81,17 @@ RSpec.describe ArticlesController, type: :controller do
         expect(response).to redirect_to(root_path)
       end
     end
+
+    describe "#edit" do
+      it "redirects to root" do
+        get :edit, params: params
+        expect(response).to redirect_to(root_path)
+      end
+    end
   end
 
   it "creates article" do
-    @article = Article.new(valid_article_attributes).save
-    expect(@article).to eq(true)
+    new_article = Article.new(valid_article_attributes).save
+    expect(new_article).to eq(true)
   end
 end
