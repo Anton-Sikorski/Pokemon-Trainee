@@ -16,78 +16,47 @@ RSpec.describe ArticlesController, type: :controller do
       created_at: Time.zone.now }
   end
 
-  shared_examples "authenticated user response test" do
-    it "returns successful responce when user signed in" do
-      sign_in user
-      get url, params: params
-      expect(response.status).to eq(200)
-    end
-  end
-
-  describe "Authenticated user activities" do
-    describe "#index" do
-      include_examples "authenticated user response test" do
-        let(:url) { :index }
+  shared_examples "response test" do |url, user_must_be_signed_in = false|
+    if user_must_be_signed_in
+      it "forbidden action for ##{url}" do
+        get url, params: params
+        expect(response.status).to eq(302)
       end
-    end
 
-    describe "#new" do
-      include_examples "authenticated user response test" do
-        let(:url) { :new }
+      it "redirects to root" do
+        get url, params: params
+        expect(response).to redirect_to(root_path)
       end
-    end
-
-    describe "#edit" do
-      include_examples "authenticated user response test" do
-        let(:url) { :edit }
-      end
-    end
-
-    describe "#show" do
-      include_examples "authenticated user response test" do
-        let(:url) { :show }
-      end
-    end
-  end
-
-  describe "UnAuthenticated user Activities" do
-    describe "#index" do
-      it "returns true" do
-        get :index
+    else
+      it "returns successful responce for ##{url}" do
+        sign_in user
+        get url, params: params
         expect(response.status).to eq(200)
       end
 
-      it "renders show" do
-        get :index
-        expect(response).to render_template(:index)
-      end
-    end
-
-    describe "#show" do
-      it "responce true" do
-        get :show, params: params
-        expect(response.status).to eq(200)
+      it "redirects to template" do
+        sign_in user
+        get url, params: params
+        expect(response).to render_template(url)
       end
 
-      it "renders show" do
-        get :show, params: params
-        expect(response).to render_template(:show)
-      end
     end
+  end
 
-    describe "#new" do
-      it "redirects to root" do
-        get :new, params: params
-        expect(response).to redirect_to(root_path)
-      end
-    end
+  describe "#index" do
+    include_examples "response test", :index, false
+  end
 
-    describe "#edit" do
-      it "redirects to root" do
-        get :edit, params: params
-        expect(response).to redirect_to(root_path)
-      end
-    end
+  describe "#show" do
+    include_examples "response test", :show, false
+  end
+
+  describe "#new" do
+    include_examples "response test", :new, true
+  end
+
+  describe "#edit" do
+    include_examples "response test", :edit, true
   end
 
   it "creates article" do
