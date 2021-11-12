@@ -4,6 +4,7 @@
       <%= search_form_for @search, url: pokemon_index_path do |f| %>
         <!-- Search if the name field contains... -->
         <%= f.search_field :name_cont, placeholder: "Enter pokemon name" %>
+        <%= f.search_field :pokedex_id_cont, placeholder: "Enter pokemon id" %>
         <%= f.submit %>
 
       <% end %>

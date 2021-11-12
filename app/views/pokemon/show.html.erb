@@ -18,10 +18,10 @@
       <%= image_tag @sprites['artwork']%>
     </figure>
     <div class="sprites">
-      <%= image_tag @sprites['front']%>
-      <%= image_tag @sprites['back']%>
-      <%= image_tag data_path['sprites']['front_shiny'] %>
-      <%= image_tag data_path['sprites']['back_shiny'] %>
+      <%= image_tag @sprites['front'] unless @sprites['front'].nil?%>
+      <%= image_tag @sprites['back'] unless @sprites['back'].nil? %>
+      <%= image_tag data_path['sprites']['front_shiny'] unless data_path['sprites']['front_shiny'].nil? %>
+      <%= image_tag data_path['sprites']['back_shiny'] unless data_path['sprites']['back_shiny'].nil? %>
     </div>
   </div>
   <div class="info">

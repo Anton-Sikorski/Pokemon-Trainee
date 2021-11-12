@@ -16,7 +16,9 @@ class LoadPokemonDb
       pokemon = Pokemon.new(name: pokemon_data["name"], pokedex_id: pokemon_data["id"].to_i)
       pokemon.save
       # load pokemon types
-      data["types"].each { |type| PokeType.new(p_type: type["type"]["name"], pokemon: p).save }
+      data["types"].each do |type|
+        PokeType.new(p_type: type["type"]["name"], pokemon: pokemon).save
+      end
       # load sprite data
       PokeSprite.new(
         back: sprite_data["back_default"],
