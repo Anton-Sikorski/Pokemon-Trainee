@@ -30,21 +30,21 @@
   <div class="wrapper">
     <% @pokemon.each do |pokemon| %>
       <div class="pokemon-card">
-        <figure class="pokemon-sprite">
+        <figure class="sprite">
           <% pokemon.poke_sprites.each do |sprite|%>
             <%= image_tag sprite.front %>
           <% end %>
         </figure>
 
-        <div class="pokemon-id">
+        <div class="id">
           <%= format_pokedex_id(pokemon.pokedex_id.to_s) %>
         </div>
 
-        <div class="pokemon-name">
+        <div class="name">
           <%= link_to clean_name(pokemon.name), pokemon_path(pokemon), class: "link-style" %>
         </div>
 
-        <div class="pokemon-type">
+        <div class="types">
           <% pokemon.poke_types.each do |type| %>
             <%= content_tag(:div, type.p_type.upcase ,class: "type #{type.p_type}" ) %>
           <% end %>

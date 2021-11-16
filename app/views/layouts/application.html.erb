@@ -11,21 +11,31 @@
   </head>
 
   <body>
-  <header>
-    <%= render "layouts/partials/header" %>
-  </header>
+    <header>
+      <%= render "layouts/partials/header" %>
+    </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-  <main>
-    <div class="content">
-      <%= yield %>
-    </div>
-    <% unless user_signed_in? || controller_name == "registrations" || controller_name == "sessions" %>
-      <sidebar class="sidebar">
-        <%= render "devise/sessions/new" %>
-      </sidebar>
-    <% end %>
-  </main>
+    <main>
+      <div class="content">
+        <%= yield %>
+      </div>
 
+      <% unless controller_name == "registrations" || controller_name == "sessions" ||
+           controller_name == "articles" && (action_name == "new" || action_name == "edit")%>
+        <sidebar class="sidebar">
+          <% unless user_signed_in?%>
+            <%= render "devise/sessions/new" %>
+          <% end %>
+          <% if controller_name == "articles" && (action_name == "index" || action_name == "show")%>
+            <%= render "articles/most_viewed" %>
+          <% end %>
+          <%if controller_name == "pokemon" %>
+            <%= render "pokemon/sample" %>
+          <% end %>
+        </sidebar>
+      <% end %>
+
+    </main>
   </body>
 </html>

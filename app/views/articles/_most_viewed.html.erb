@@ -1,0 +1,9 @@
+<div class="best-article background-style">
+ <h3><%= @best_article.title %></h3>
+  <hr>
+ <div class="body">
+   <%= @best_article.body%>
+ </div>
+  <hr>
+  <p><%= link_to "to discussion", article_path(@best_article) %></p>
+</div>

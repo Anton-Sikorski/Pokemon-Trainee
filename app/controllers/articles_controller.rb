@@ -10,13 +10,14 @@ class ArticlesController < ApplicationController
   def index
     @search = Article.ransack(params[:q])
     @articles = @search.result
+    @best_article = most_viewed
   end
 
   def show
     @article = Article.find(params[:id])
     increase_views(@article)
     @users = User.all
-    # ViewCounterWorker.perform_async(@article)
+    @best_article = most_viewed
   end
 
   def new
@@ -55,6 +56,13 @@ class ArticlesController < ApplicationController
 
   private
 
+    # finds most viewed article created recently
+    def most_viewed
+      @best_article = Article.where("created_at >= :week_ago AND views = :max_views",
+                                    week_ago: DateTime.now.change(day: 7), max_views: Article.maximum("views")).first
+    end
+
+    # increases views on GET#show
     def increase_views(article)
       article.views += 1
       article.save

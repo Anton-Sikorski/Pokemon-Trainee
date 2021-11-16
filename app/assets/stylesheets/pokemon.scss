@@ -25,13 +25,11 @@
   #search{
     width: 20vw;
   }
-}
-
-.search-form{
-  margin-left: auto;
-  padding: 0.5em 0;
-  #search{
-    width: 20vw;
+  #q_name_cont{
+    max-width: 11em;
+  }
+  #q_pokedex_id_cont, {
+    max-width: 9em;
   }
 }
 
@@ -40,52 +38,54 @@
   color: #2967a9;
   border-radius: 5px;
   padding: 0.3em;
-}
 
-.pokemon-id{
-  color: rgba(162, 161, 161, 0.99);
-  display: flex;
-  justify-content: center;
-}
-
-.pokemon-name{
-  display: flex;
-  justify-content: center;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:visited{
-    color: black;
+  .id{
+    color: rgba(162, 161, 161, 0.99);
+    display: flex;
+    justify-content: center;
   }
 
-  a:hover{
-    text-decoration: underline;
+  .name{
+    display: flex;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    a:visited{
+      color: black;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .sprite{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .types {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .type{
+      border-radius: 1vh;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0.1em 0.3em ;
+      margin: 0.1em;
+    }
   }
 }
 
-.pokemon-sprite{
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.pokemon-type {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  .type{
-    border-radius: 1vh;
-    font-size: 13px;
-    font-weight: bold;
-    text-align: center;
-    padding: 0.1em 0.3em ;
-    margin: 0.1em;
-  }
-}
 
 .pagination{
   border-top: 2px solid black;
@@ -245,6 +245,29 @@
   }
 }
 
+.sample{
+  min-width: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .pokemon-card {
+    width: 10vw;
+    position: relative;
+    display: none;
+  }
+  .arrow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 2em;
+    height: 4em;
+  }
+  .arrow:hover{
+    cursor: pointer;
+    background-color: rgba(198, 200, 195, 0.2);
+  }
+}
 
 .normal{
   background-color: #aa9 ;

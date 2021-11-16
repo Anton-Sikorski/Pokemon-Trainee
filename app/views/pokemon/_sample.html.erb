@@ -1,0 +1,33 @@
+<div class="background-style">
+  <h3>Try your luck!</h3>
+  <div id="sample" class="sample">
+    <div id="prev-pokemon" class="arrow">&#8592;</div>
+    <div class="card-container">
+      <% @sample.each do |pokemon| %>
+        <div class="pokemon-card">
+          <figure class="sprite">
+            <% pokemon.poke_sprites.each do |sprite|%>
+              <%= image_tag sprite.front %>
+            <% end %>
+          </figure>
+
+          <div class="id">
+            <%= format_pokedex_id(pokemon.pokedex_id.to_s) %>
+          </div>
+
+          <div class="name">
+            <%= link_to clean_name(pokemon.name), pokemon_path(pokemon), class: "link-style" %>
+          </div>
+
+          <div class="types">
+            <% pokemon.poke_types.each do |type| %>
+              <%= content_tag(:div, type.p_type.upcase ,class: "type #{type.p_type}" ) %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div id="next-pokemon"  class="arrow">&#8594;</div>
+    <%= javascript_pack_tag "sample"%>
+  </div>
+</div>

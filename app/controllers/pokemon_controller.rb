@@ -7,6 +7,7 @@ class PokemonController < ApplicationController
     @pagy, @pokemon = pagy(@search.result.order("pokedex_id ASC")
                                   .includes(:poke_sprites, :poke_types),
                            size: [1, 2, 2, 1], items: 25)
+    @sample = Pokemon.all.sample(5)
   end
 
   def show
@@ -15,5 +16,6 @@ class PokemonController < ApplicationController
     @types = @pokemon.poke_types.map(&:p_type)
     @next = Pokemon.find_by(id: @pokemon.id + 1)
     @prev = Pokemon.find_by(id: @pokemon.id - 1)
+    @sample = Pokemon.all.sample(5)
   end
 end

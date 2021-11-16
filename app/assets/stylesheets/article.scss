@@ -103,14 +103,34 @@
 }
 
 .form{
-  .form-title input{
+  .title input{
     min-width: 25vw;
     margin: 1em;
   }
 
-  .form-body textarea{
+  .body textarea{
     margin: 1em;
     min-width: 60vw;
     min-height: 30vh;
+  }
+}
+
+.best-article{
+  min-width: inherit;
+  .body {
+    margin: 0.3em 0.5em;
+    max-height: 20vh;
+    overflow: hidden;
+  }
+  a{
+    text-decoration: none;
+    color: #40e3e2;
+  }
+  a:visited{
+    color: #40e3e2;
+  }
+
+  a:hover{
+    text-decoration: underline;
   }
 }
