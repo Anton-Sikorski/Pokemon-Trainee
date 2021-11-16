@@ -7,7 +7,6 @@ let prev = document.getElementById("prev-pokemon");
 let next = document.getElementById("next-pokemon");
 
 next.addEventListener('click', () => {
-    console.log(position)
     pokemon[position].style.display = 'none';
 
     if (position + 1 === pokemon.length ) {
@@ -19,7 +18,6 @@ next.addEventListener('click', () => {
 });
 
 prev.addEventListener('click', () => {
-    console.log(position)
     pokemon[position].style.display = 'none';
 
     if (position === 0 ) {

@@ -8,16 +8,16 @@ class ArticlesController < ApplicationController
   end
 
   def index
+    super
     @search = Article.ransack(params[:q])
     @articles = @search.result
-    @best_article = most_viewed
   end
 
   def show
+    super
     @article = Article.find(params[:id])
     increase_views(@article)
     @users = User.all
-    @best_article = most_viewed
   end
 
   def new
@@ -55,12 +55,6 @@ class ArticlesController < ApplicationController
   end
 
   private
-
-    # finds most viewed article created recently
-    def most_viewed
-      @best_article = Article.where("created_at >= :week_ago AND views = :max_views",
-                                    week_ago: DateTime.now.change(day: 7), max_views: Article.maximum("views")).first
-    end
 
     # increases views on GET#show
     def increase_views(article)

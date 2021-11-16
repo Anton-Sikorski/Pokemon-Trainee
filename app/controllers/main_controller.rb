@@ -3,11 +3,13 @@
 # controller for user model
 class MainController < ApplicationController
   def index
+    super
     @time = time { @users = User.all } # loads each attachment separately. don't know howto fix it.
     # includes avatar_attachment doesn't make any difference. with_image_attachment either
   end
 
   def show
+    super
     @user = User.find(params[:id])
   end
 

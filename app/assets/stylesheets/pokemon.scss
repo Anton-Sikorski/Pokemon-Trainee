@@ -183,6 +183,7 @@
 
   .artwork img{
     max-width: 30vw;
+    min-width: 30vw;
   }
   .sprites img{
     max-width: 8vw;
@@ -245,13 +246,18 @@
   }
 }
 
+.sample-container{
+  text-align: center;
+}
+
 .sample{
-  min-width: inherit;
+  width: inherit;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   .pokemon-card {
+    margin: 0.3em;
     width: 10vw;
     position: relative;
     display: none;

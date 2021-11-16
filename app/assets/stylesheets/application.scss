@@ -107,11 +107,22 @@ main{
    }
 }
 
-.logo-container a{
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: -5px 0px rgba(0,0,0,0.2);
+  }
+
+  a {
     position: absolute;
-    min-width: 4em;
+    min-width: 8em;
     min-height: 3em;
-}
+}}
 
 .errors{
   padding: 0.1em 1em;

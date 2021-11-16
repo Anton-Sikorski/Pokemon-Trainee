@@ -1,7 +1,7 @@
 Ransack.configure do |c|
   c.custom_arrows = {
-    up_arrow: 'U+02191',
-    down_arrow: 'U+02193',
-    default_arrow: 'a'
+    up_arrow: '&#8593;',
+    down_arrow: '&#8595;',
+    default_arrow: ""
   }
 end

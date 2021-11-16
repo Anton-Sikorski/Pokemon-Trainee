@@ -11,6 +11,16 @@ class ApplicationController < ActionController::Base
   # connected to the appropriate policy. In policy we have rules for each
   # controller action, which determine scope and actions allowed to the user.
 
+  def index
+    @sample = Pokemon.all.sample(5)
+    @best_article = most_viewed
+  end
+
+  def show
+    @sample = Pokemon.all.sample(5)
+    @best_article = most_viewed
+  end
+
   protected
 
     def configure_permitted_parameters
@@ -24,5 +34,11 @@ class ApplicationController < ActionController::Base
     def user_not_authorized
       flash[:warning] = "You are not authorized to perform this action."
       redirect_to(request.referrer || root_path)
+    end
+
+    # finds most viewed article created recently
+    def most_viewed
+      Article.where("created_at >= :week_ago AND views = :max_views",
+                    week_ago: DateTime.now.change(day: 7), max_views: Article.maximum("views")).first
     end
 end
