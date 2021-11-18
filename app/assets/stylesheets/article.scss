@@ -44,6 +44,11 @@
     white-space: pre-wrap;
   }
 
+  .show-full{
+    overflow: visible;
+    max-height: none;
+  }
+
   a{
     text-decoration: none;
     color: #40e3e2;
@@ -124,10 +129,10 @@
   }
   a{
     text-decoration: none;
-    color: #40e3e2;
+    color: rgba(44, 173, 172, 0.89);
   }
   a:visited{
-    color: #40e3e2;
+    color: rgba(44, 173, 172, 0.89);
   }
 
   a:hover{

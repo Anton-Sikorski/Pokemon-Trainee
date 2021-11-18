@@ -3,7 +3,7 @@
     <%= image_tag current_user.avatar, size: "40x40" %>
   </div>
   <div class="data">
-    <p class="name"><%= current_user.name %></p>
+    <p id="link"><strong><%= link_to current_user.name, main_path(current_user.id) %></strong></p>
     <p class="email"><%= current_user.email %></p>
   </div>
 </div>

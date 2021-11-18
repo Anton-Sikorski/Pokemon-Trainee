@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   def index
     super
     @search = Article.ransack(params[:q])
-    @articles = @search.result
+    @articles = @search.result.order("views desc")
   end
 
   def show

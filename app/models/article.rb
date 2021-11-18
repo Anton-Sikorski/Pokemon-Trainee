@@ -10,4 +10,8 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :body,  length: { minimum: 5 }, presence: true
+
+  ransacker :views do
+    Arel.sql("to_char(views, '99999')")
+  end
 end

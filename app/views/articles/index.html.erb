@@ -7,15 +7,15 @@
       </button>
     </div>
   <% end %>
-
   <div>
     <span>Sort by:</span>
     <span id="link"><%= sort_link( @search, :views) %></span>
+    <span id="link"><%= sort_link( @search, :created_at, "New") %></span>
   </div>
 
 </div>
 
-<% @articles.sort_by { |article| article.views }.reverse.each do |article| %>
+<% @articles.each do |article| %>
     <% if !article.archived? || (user_signed_in? && current_user.admin?) %>
       <div class="article post-content background-style">
         <h2> <%= article.title %> </h2>
@@ -26,7 +26,7 @@
           <div class="views">
             <%= image_tag "eye.png", size: "15x15"%>
             <span class="views-count"><%= article.views %></span>
-          </div>
+            </div>
           <span class="date"><%= format_time(article.created_at) %></span>
         </div>
       </div>
