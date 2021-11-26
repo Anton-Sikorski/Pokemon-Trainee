@@ -1,5 +1,5 @@
-<%= form_with model: article do |form| %>
-  <div class="form background-style">
+<%= form_with model: article, id: "new_form"  do |form| %>
+  <div class="form">
     <div class="title">
       <%= form.text_field :title , placeholder: "Post name"%>
       <% article.errors.full_messages_for(:title).each do |message| %>
@@ -21,7 +21,7 @@
       </div>
     <% end %>
     <div>
-      <%= form.submit %>
+      <%= form.button %>
     </div>
   </div>
 <% end %>

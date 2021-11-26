@@ -65,14 +65,15 @@ jobs:
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
       - run:
           name: Database setup
           command: bundle exec rails db:setup
+
       - run:
-          name: Schema load
-          command: bundle exec rails db:schema:load --trace
-      - ruby/rubocop-check
-      - ruby/rspec-test
+          name: Tests run
+          command: bundle exec rake
+
 
 workflows:
   version: 2

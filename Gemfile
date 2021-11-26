@@ -59,6 +59,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "capybara"
   gem "devise"
   gem "faker"
   gem "pagy"
@@ -70,7 +71,6 @@ group :development, :test do
   gem "shoulda-matchers"
   gem "sidekiq"
   gem "sidekiq-unique-jobs"
-  gem "capybara"
 end
 
 group :development do

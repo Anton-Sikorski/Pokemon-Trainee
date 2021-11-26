@@ -34,6 +34,9 @@ Metrics/AbcSize:
   Exclude:
     - 'app/workers/*.rb'
 
+RSpec/ExampleLength:
+  Max: 10
+
 # Prefer &&/|| over and/or.
 Style/AndOr:
   Enabled: true

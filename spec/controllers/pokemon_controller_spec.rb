@@ -11,11 +11,6 @@ RSpec.describe PokemonController, type: :controller do
       get url, params: params
       expect(response.status).to eq(200)
     end
-
-    it "redirects to template" do
-      get url, params: params
-      expect(response).to render_template(url)
-    end
   end
 
   describe "#index" do

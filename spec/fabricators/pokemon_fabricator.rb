@@ -2,7 +2,7 @@
 
 Fabricator(:pokemon) do
   name       { Faker::Name.name }
-  id         { rand(1..10) }
-  pokedex_id { rand(1..10) }
+  id         { rand(1..1000) }
+  pokedex_id { rand(1..1000) }
   created_at { 5.days.ago }
 end
