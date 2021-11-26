@@ -7,7 +7,7 @@ class PokemonController < ApplicationController
     @search = Pokemon.ransack(params[:q])
     @pagy, @pokemon = pagy(@search.result.order("pokedex_id ASC")
                                   .includes(:poke_sprites, :poke_types),
-                           size: [1, 2, 2, 1], items: 25)
+                           size: [1, 1, 1, 1], items: 25)
   end
 
   def show

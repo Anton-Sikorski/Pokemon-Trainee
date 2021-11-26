@@ -59,8 +59,6 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
-<<<<<<< HEAD
-=======
   gem "devise"
   gem "faker"
   gem "pagy"
@@ -68,14 +66,11 @@ group :development, :test do
   gem "ransack"
   gem "redis-rails"
   gem "reek"
->>>>>>> e7ee9173... install pagy. uninstall kaminari
   gem "rspec-rails"
   gem "shoulda-matchers"
-<<<<<<< HEAD
-=======
   gem "sidekiq"
   gem "sidekiq-unique-jobs"
->>>>>>> d5bec4eb... pokemon db population begins with server initialization. Ransack add
+  gem "capybara"
 end
 
 group :development do
@@ -92,9 +87,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 3.26"
   gem "fabrication"
-  gem "rails-controller-testing"
   gem "rspec"
   gem "selenium-webdriver"
   # Easy installation and use of web drivers to run system tests with browsers

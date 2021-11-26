@@ -2,14 +2,6 @@
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
-.body{
-  textarea{
-    min-width: 60vw;
-    min-height: 10vh;
-  }
-}
-
 .comment {
   .head{
     display: flex;
@@ -33,5 +25,14 @@
   .body {
     background-color: rgba(236, 233, 233, 0.62);
     padding: 0.3em;
+  }
+}
+
+.comment-new{
+  .body{
+    textarea {
+      min-width: 60em;
+      min-height: 10vh;
+    }
   }
 }

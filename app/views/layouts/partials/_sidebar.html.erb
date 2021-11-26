@@ -1,5 +1,5 @@
-<% unless controller_name == "registrations" || controller_name == "sessions" ||
-  controller_name == "articles" && (action_name == "new" || action_name == "edit")%>
+<% unless controller_name.in?(%w[registrations sessions articles]) &&
+          action_name.in?(%w[new edit create]) %>
   <sidebar class="sidebar">
     <% if user_signed_in?%>
       <%= render "main/profile" %>

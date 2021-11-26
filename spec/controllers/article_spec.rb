@@ -33,13 +33,6 @@ RSpec.describe ArticlesController, type: :controller do
         get url, params: params
         expect(response.status).to eq(200)
       end
-
-      it "redirects to template" do
-        sign_in user
-        get url, params: params
-        expect(response).to render_template(url)
-      end
-
     end
   end
 
