@@ -3,12 +3,8 @@
 require "rails_helper"
 
 RSpec.describe User, type: :model do
-  user = User.new(
-    name: "Anton",
-    email: "anton@mail.tu",
-    role: 1,
-    password: 123_456
-  )
+  user = Fabricate(:user)
+  
   describe "Validations" do
     it "is valid with valid attributes" do
       expect(user).to be_valid

@@ -3,12 +3,8 @@
 require "rails_helper"
 
 RSpec.describe Article, type: :model do
-  article = Article.new(
-    title: "Good title",
-    body: "High quality text",
-    id: 1,
-    status: "public"
-  )
+  user = Fabricate(:user)
+  article = Fabricate(:article, user_id: user.id)
 
   describe "Associations" do
     it { should belong_to(:user).without_validating_presence }

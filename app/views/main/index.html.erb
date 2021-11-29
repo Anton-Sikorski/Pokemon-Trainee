@@ -3,7 +3,7 @@
   <div class="wrapper">
     <% @users.each do |user| %>
       <div class="user-card">
-        <figure><%= image_tag user.avatar, size: "40x40" %></figure>
+        <figure><%= image_tag user.avatar, size: "60x60" %></figure>
         <div id="link"><%= link_to "#{user.name}", main_path(user) %></div>
       </div>
     <% end %>
