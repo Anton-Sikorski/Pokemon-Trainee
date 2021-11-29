@@ -28,7 +28,9 @@ Metrics/BlockLength:
     - 'test/**/*.rb'
 
 Metrics/MethodLength:
-  Max: 15
+  Exclude:
+    - 'app/helpers/*'
+    - 'app/workers/*'
 
 Metrics/AbcSize:
   Exclude:

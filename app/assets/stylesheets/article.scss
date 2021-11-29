@@ -42,6 +42,9 @@
 
   .body{
     white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 25vh;
   }
 
   .show-full{
@@ -85,9 +88,11 @@
     font-size: 14px;
     color: #7c7c7c;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    span {
+      padding: 0 0.3em;
+    }
     .views {
       display: flex;
       padding: 0.1em;

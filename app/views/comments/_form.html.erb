@@ -6,14 +6,12 @@
       <div class="errors"><%= message %></div>
     <% end %>
   </div>
-
   <% if current_user.admin? %>
     <div class="privacy">
       <%= form.label :status %><br>
       <%= form.select :status, %w[public private archived], selected: 'public' %>
     </div>
   <% end %>
-
   <p>
     <%= form.submit %>
   </p>

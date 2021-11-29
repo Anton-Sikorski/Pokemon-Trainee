@@ -3,8 +3,9 @@
     <h1 class="title"><%= @article.title %></h1>
     <p class="body show-full"><%= @article.body %></p>
     <div class="description">
+      <%= image_tag "eye.png", size: "15x15"%>
       <span class="views"><%= @article.views %></span>
-      <span class="user-name"><%=  @users.find_by(id: @article.user_id).name %>, </span>
+      <span class="user-name">by <%=  @users.find_by(id: @article.user_id).name %>, </span>
       <span class="created-at"><%= @article.created_at.strftime("%b %d %Y, %l:%M%P") %></span>
     </div>
     <hr>

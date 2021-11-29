@@ -7,7 +7,7 @@ RSpec.describe Article, type: :model do
   article = Fabricate(:article, user_id: user.id)
 
   describe "Associations" do
-    it { should belong_to(:user).without_validating_presence }
+    it { is_expected.to belong_to(:user).without_validating_presence }
   end
 
   describe "Validations" do

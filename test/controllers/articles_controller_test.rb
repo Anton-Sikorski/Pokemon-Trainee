@@ -3,7 +3,7 @@
 require "test_helper"
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  before do
     @article = articles(:one)
   end
 

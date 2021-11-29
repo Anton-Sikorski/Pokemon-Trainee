@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
 
     def user_not_authorized
       flash[:warning] = "You are not authorized to perform this action."
-      redirect_to(request.referrer || root_path)
+      redirect_to(request.referer || root_path)
     end
 
     # finds most viewed article created recently
