@@ -26,7 +26,7 @@ Article.create(title: 'Pokémon Platinum',
                body: "The majority of Platinum follows the same story as Diamond and Pearl, however, there are some key changes. The beginning is slightly different - you meet Professor Rowan and his assistant before you get to the lake and he lets you choose one of the three starters. You then first battle your rival, rather than a wild Pokémon.\r\n\r\nThe order in which you tackle Sinnoh's gyms changes. In Diamond/Pearl your third gym battle was Maylene in Veilstone City, followed by Crasher Wake in Pastoria City, then Fantina in Hearthome City. In Platinum the third gym you come to is Fantina's then Maylene and Wake.",
                user_id: 2, status: 'public')
 
-7.times do
+10.times do
   Article.create(title: Faker::Lorem.sentence(word_count: rand(2..7)),
                  body: Faker::Lorem.paragraphs(number: rand(4..10)).join(" "),
                  user_id: rand(1..20),
