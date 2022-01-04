@@ -26,7 +26,6 @@ module PokemonHelper
 
   def hinted_text_field_tag(name, value = nil, hint = "Click and enter text", options = {})
     value = hint if value.nil?
->>>>>>> 516d56b9... edit stylesheet for registration. add sidebar. add partials. edit helper
     text_field_tag name, value,
                    { onclick: "if($(this).value == '#{hint}'){$(this).value = ''}",
                      onblur: "if($(this).value == ''){$(this).value = '#{hint}'}" }
