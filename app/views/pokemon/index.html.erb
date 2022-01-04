@@ -1,11 +1,27 @@
-<div class="search-container background-style">
+<div class="search-container">
   <div class="search-form">
-    <%= form_with(url: '/pokemon', method: 'get', local: true) do %>
-      <%= hinted_text_field_tag :textfield, params[:search], "Looking for someone?" %>
-      <%= submit_tag "Search" %>
-    <% end %>
-  </div>
+    <div>
+      <%= search_form_for @search, url: pokemon_index_path do |f| %>
+        <!-- Search if the name field contains... -->
+        <%= f.search_field :name_cont, placeholder: "Enter pokemon name" %>
+        <%= f.search_field :pokedex_id_cont, placeholder: "Enter pokemon id" %>
+        <%= f.submit %>
 
+      <% end %>
+    </div>
+
+    <div id="link">
+      <span>Sort by:</span>
+      <%= sort_link( @search, :name) %>
+      <%= sort_link( @search, :pokedex_id) %>
+    </div>
+
+    <div id="link">
+      <%= link_to "Clear", request.path %>
+    </div>
+  </div>
+</div>
+<div class="pokemon-container background-style">
   <% if @pokemon.empty? %>
     <div class="background-style">No results</div>
   <% end %>
@@ -13,21 +29,21 @@
   <div class="wrapper">
     <% @pokemon.each do |pokemon| %>
       <div class="pokemon-card">
-        <figure class="pokemon-sprite">
+        <figure class="sprite">
           <% pokemon.poke_sprites.each do |sprite|%>
             <%= image_tag sprite.front %>
           <% end %>
         </figure>
 
-        <div class="pokemon-id">
+        <div class="id">
           <%= format_pokedex_id(pokemon.pokedex_id.to_s) %>
         </div>
 
-        <div class="pokemon-name">
-          <%= link_to upcase_first_letter(pokemon.name), pokemon_path(pokemon), class: "link-style" %>
+        <div class="name">
+          <%= link_to clean_name(pokemon.name), pokemon_path(pokemon), class: "link-style" %>
         </div>
 
-        <div class="pokemon-type">
+        <div class="types">
           <% pokemon.poke_types.each do |type| %>
             <%= content_tag(:div, type.p_type.upcase ,class: "type #{type.p_type}" ) %>
           <% end %>
@@ -37,6 +53,6 @@
   </div>
 
   <div>
-    <%= paginate @pokemon %>
+    <%== pagy_nav(@pagy) %>
   </div>
 </div>

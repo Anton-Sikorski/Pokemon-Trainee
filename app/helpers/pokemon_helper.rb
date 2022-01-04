@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-# pokemon
+# helper to upgrade pokemon view
 module PokemonHelper
+  include Pagy::Frontend
+
   def format_pokedex_id(id)
     case id.length
     when 1
@@ -13,13 +15,17 @@ module PokemonHelper
     end
   end
 
-  def upcase_first_letter(word)
-    word[0] = word[0].upcase
-    word
+  def clean_name(name)
+    name = name.gsub(/-/," ") if 'Mr' == name.match(/[a-zA-Z]+/).to_s.capitalize
+    name.match(/[a-zA-Z\s]+/).to_s.capitalize
+  end
+
+  def convert_attr(value)
+    "#{value.to_i / 10}." + "#{value % 10}"
   end
 
   def hinted_text_field_tag(name, value = nil, hint = "Click and enter text", options = {})
-    value = value.nil? ? hint : value
+    value = hint if value.nil?
     text_field_tag name, value,
                    { onclick: "if($(this).value == '#{hint}'){$(this).value = ''}",
                      onblur: "if($(this).value == ''){$(this).value = '#{hint}'}" }

@@ -1,4 +1,7 @@
-require: rubocop-performance
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rails
 
 AllCops:
   Exclude:
@@ -6,8 +9,16 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - 'bin/*'
+    - 'app/helpers/pokemon_helper.rb' # added temporary until find another solution for page_nav method
     - 'node_modules/**/*'
     - 'vendor/bundle/**/*' # For CI broken
+
+  DisabledByDefault: false
+  UseCache: true
+  MaxFilesInCache: 20000
+  CacheRootDirectory: tmp/rubocop
+  TargetRubyVersion: 3.0.2
+  NewCops: enable
 
 Metrics/BlockLength:
   IgnoredMethods: ['describe', 'context']
@@ -17,7 +28,16 @@ Metrics/BlockLength:
     - 'test/**/*.rb'
 
 Metrics/MethodLength:
-  Max: 15
+  Exclude:
+    - 'app/helpers/*'
+    - 'app/workers/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'app/workers/*.rb'
+
+RSpec/ExampleLength:
+  Max: 10
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
@@ -129,6 +149,9 @@ Layout/EndAlignment:
 Lint/RequireParentheses:
   Enabled: true
 
+Performance:
+  Enabled: true
+
 # Use `bind_call(obj, args, ...)` instead of `bind(obj).call(args, ...)`.
 Performance/BindCall:
   Enabled: true
@@ -234,67 +257,67 @@ Performance/UnfreezeString:
 Performance/UriDefaultParser:
   Enabled: true
 
-  int/DeprecatedOpenSSLConstant:
-    Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
 
-  Lint/DuplicateElsifCondition:
-    Enabled: true
+Lint/DuplicateElsifCondition:
+  Enabled: true
 
-  Lint/MixedRegexpCaptureTypes:
-    Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
 
-  Lint/RaiseException:
-    Enabled: true
+Lint/RaiseException:
+  Enabled: true
 
-  Lint/StructNewOverride:
-    Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
 
-  Style/AccessorGrouping:
-    Enabled: true
+Style/AccessorGrouping:
+  Enabled: true
 
-  Style/ArrayCoercion:
-    Enabled: true
+Style/ArrayCoercion:
+  Enabled: true
 
-  Style/BisectedAttrAccessor:
-    Enabled: true
+Style/BisectedAttrAccessor:
+  Enabled: true
 
-  Style/CaseLikeIf:
-    Enabled: true
+Style/CaseLikeIf:
+  Enabled: true
 
-  Style/ExponentialNotation:
-    Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
 
-  Style/HashAsLastArrayItem:
-    Enabled: true
+Style/HashAsLastArrayItem:
+  Enabled: true
 
-  Style/HashEachMethods:
-    Enabled: true
+Style/HashEachMethods:
+  Enabled: true
 
-  Style/HashLikeCase:
-    Enabled: true
+Style/HashLikeCase:
+  Enabled: true
 
-  Style/HashTransformKeys:
-    Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
 
-  Style/HashTransformValues:
-    Enabled: true
+Style/HashTransformValues:
+  Enabled: true
 
-  Style/RedundantAssignment:
-    Enabled: true
+Style/RedundantAssignment:
+  Enabled: true
 
-  Style/RedundantFetchBlock:
-    Enabled: true
+Style/RedundantFetchBlock:
+  Enabled: true
 
-  Style/RedundantFileExtensionInRequire:
-    Enabled: true
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
 
-  Style/RedundantRegexpCharacterClass:
-    Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
 
-  Style/RedundantRegexpEscape:
-    Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
 
-  Style/SlicingWithRange:
-    Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
 
 

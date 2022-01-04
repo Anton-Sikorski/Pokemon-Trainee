@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DevAuth</title>
+    <title>Trainee</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,45 +11,18 @@
   </head>
 
   <body>
-  <header>
-    <div class="logo-container">
-      <%= link_to '', root_path %>
-      <figure class="logo">
-        <%= image_tag("second.png", size: "70x50", alt: 'Logo') %>
-      </figure>
-    </div>
+    <header>
+      <%= render "layouts/partials/header" %>
+    </header>
 
-    <nav class="navigation">
-
-      <ul class="navbar">
-        <li><%= link_to "Blog", root_path %></li>
-        <li><%= link_to "Pokedex", pokemon_index_path %></li>
-        <li><%= link_to "User list", main_index_path %></li>
-      </ul>
-
-      <div class="user-options">
-        <% if user_signed_in? %>
-          <div class="profile-data">
-            <span><strong><%= link_to current_user.name, main_path(current_user.id) %></strong></span>|
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-          </div>
-        <% else %>
-          <div>
-            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-          </div>
-        <% end %>
-      </div>
-
-    </nav>
-  </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-  <main>
-    <div class="content">
-      <%= yield %>
-    </div>
-  </main>
 
+    <main>
+      <div class="content">
+        <%= yield %>
+      </div>
+      <%= render "layouts/partials/sidebar" %>
+    </main>
   </body>
 </html>

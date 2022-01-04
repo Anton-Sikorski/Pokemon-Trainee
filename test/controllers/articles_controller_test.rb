@@ -3,18 +3,30 @@
 require "test_helper"
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  before do
     @article = articles(:one)
   end
 
-  test "should get index" do
-    get articles_url
-    assert_response :success
-  end
+  context "should GET" do
+    test "index" do
+      get articles_url
+      assert_response :success
+    end
 
-  test "should get new" do
-    get new_article_url
-    assert_response :success
+    test "new" do
+      get new_article_url
+      assert_response :success
+    end
+
+    test "edit" do
+      get edit_article_url(@article)
+      assert_response :success
+    end
+
+    test "article" do
+      get article_url(@article)
+      assert_response :success
+    end
   end
 
   test "should create article" do
@@ -23,16 +35,6 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to article_url(Article.last)
-  end
-
-  test "should show article" do
-    get article_url(@article)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_article_url(@article)
-    assert_response :success
   end
 
   test "should update article" do

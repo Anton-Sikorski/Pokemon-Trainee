@@ -1,3 +1,41 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.wrapper {
+  display: grid;
+  grid-template-columns:  12vw 12vw 12vw 12vw ;
+  grid-gap: 1vw;
+  color: #444;
+  justify-content: center;
+}
+
+.user-card{
+  background-color: #fff;
+  color: #2967a9;
+  border-radius: 5px;
+  padding: 1em 0.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  div a{
+    display: flex;
+    text-align: center;
+    height: 2.5em;
+  }
+}
+
+.profile-sidebar{
+  display: flex;
+  .data{
+    .name {
+      font-weight: bold;
+    }
+    .email {
+      color: darkgrey;
+      font-size: 14px;
+      font-style: italic;
+    }
+    margin: 0 0.5em;
+  }
+}

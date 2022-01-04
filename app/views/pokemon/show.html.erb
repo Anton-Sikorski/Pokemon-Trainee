@@ -1,6 +1,65 @@
-<div class="background-style">
-  <%= @pokemon.name %>
-  <%= image_tag @sprites['front']%>
-  <%= image_tag @sprites['back']%>
-  <%= image_tag @sprites['artwork']%>
+<% data_path = JSON.parse(Net::HTTP.get(URI("https://pokeapi.co/api/v2/pokemon/#{@pokemon.pokedex_id}"))) %>
+<div class="show-path">
+  <% if @prev.nil?%>
+      <span id="link"></span>
+    <% else %>
+      <span id="link"><%= link_to clean_name(@prev.name), pokemon_path(@prev.id) %></span>
+  <% end %>
+  <h1><%= clean_name(@pokemon.name) %></h1>
+  <% if @next.nil?%>
+      <span id="link"></span>
+    <% else %>
+      <span id="link"><%= link_to clean_name(@next.name), pokemon_path(@next.id) %></span>
+  <% end %>
+</div>
+<div class="pokemon-page background-style">
+  <div>
+    <figure class="artwork">
+      <%= image_tag @sprites['artwork']%>
+    </figure>
+    <div class="sprites">
+      <%= image_tag(@sprites['front'], class: "sprite") unless @sprites['front'].nil?%>
+      <%= image_tag(@sprites['back'],class: "sprite")  unless @sprites['back'].nil? %>
+      <%= image_tag(data_path['sprites']['front_shiny'],class: "sprite") unless data_path['sprites']['front_shiny'].nil? %>
+      <%= image_tag(data_path['sprites']['back_shiny'],class: "sprite") unless data_path['sprites']['back_shiny'].nil? %>
+    </div>
+  </div>
+  <div class="info">
+    <div>
+      <h3>Pokedex data</h3>
+      <table class="data">
+        <tr>
+          <th>National №</th><td><strong><%= @pokemon.pokedex_id %></strong></td>
+        </tr>
+        <tr>
+          <th>Type</th>
+          <td class="types">
+            <% @types.each do |type| %>
+              <%= content_tag(:span, type.upcase ,class: "type #{type}" ) %>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <th>Height </th><td><%= convert_attr(data_path['height']) %> m</td>
+        </tr>
+        <tr>
+          <th>Weight </th><td><%= convert_attr(data_path['weight']) %> kg</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>Base stats</h3>
+      <table class="attributes">
+        <% data_path['stats'].each do |stat| %>
+          <tr>
+            <td><%= stat['stat']['name'].gsub(/-/," ").capitalize%></td>
+            <td><%= stat['base_stat'] %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
+    <%= javascript_pack_tag "enlarge"%>
+  </div>
 </div>

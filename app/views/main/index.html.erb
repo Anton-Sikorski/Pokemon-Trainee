@@ -1,7 +1,10 @@
 <div class="background-style">
-  <% @users.each do |user| %>
-    <div><%= user.name%></div>
-    <%= image_tag user.avatar, size: "40x40" %>
-    <%= link_to "To #{user.name}'s' profile", main_path(user) %>
-  <% end %>
+  <div class="wrapper">
+    <% @users.each do |user| %>
+      <div class="user-card">
+        <figure><%= image_tag user.avatar, size: "50x50" %></figure>
+        <div id="link"><%= link_to "#{user.name}", main_path(user) %></div>
+      </div>
+    <% end %>
+  </div>
 </div>

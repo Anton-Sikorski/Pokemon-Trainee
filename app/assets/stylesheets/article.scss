@@ -5,14 +5,23 @@
 .article-menu{
   display: flex;
   flex-direction: row;
-  paddding: 0.3em;
+
   justify-content: space-between;
+  padding: 0.5em 1em;
+  align-items: center;
+  background-color: whitesmoke;
+  margin: 0.3em 0.5em;
+  border-radius: 1vh;
 
   .article-menu-style{
     background-color: whitesmoke;
     padding: 0.5em;
     margin: 0.1em 0.5em;
     border-radius: 0.5em;
+  }
+  span{
+    text-decoration: underline;
+    margin: 0.2em;
   }
 }
 
@@ -33,6 +42,14 @@
 
   .body{
     white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 25vh;
+  }
+
+  .show-full{
+    overflow: visible;
+    max-height: none;
   }
 
   a{
@@ -71,9 +88,11 @@
     font-size: 14px;
     color: #7c7c7c;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    span {
+      padding: 0 0.3em;
+    }
     .views {
       display: flex;
       padding: 0.1em;
@@ -94,17 +113,34 @@
 }
 
 .form{
-  .form-title input{
+  .title input{
     min-width: 25vw;
     margin: 1em;
   }
 
-  .form-body textarea{
+  .body textarea{
     margin: 1em;
     min-width: 60vw;
     min-height: 30vh;
   }
 }
 
+.best-article{
+  width: inherit;
+  .body {
+    margin: 0.3em 0.5em;
+    max-height: 20vh;
+    overflow: hidden;
+  }
+  a{
+    text-decoration: none;
+    color: rgba(44, 173, 172, 0.89);
+  }
+  a:visited{
+    color: rgba(44, 173, 172, 0.89);
+  }
 
-
+  a:hover{
+    text-decoration: underline;
+  }
+}

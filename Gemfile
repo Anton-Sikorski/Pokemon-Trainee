@@ -5,18 +5,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.2"
 
-gem "devise"
-
-gem "pundit"
-
-gem "kaminari"
-
-gem "redis-rails"
-
-gem "sidekiq"
-
-gem "faker"
-
 gem "rubocop", require: false
 gem "rubocop-performance"
 gem "rubocop-rails"
@@ -29,6 +17,8 @@ gem "rails", "~> 6.1.4", ">= 6.1.4.1"
 
 gem "pg"
 
+gem "hotwire-rails"
+
 # Use Puma as the app server
 gem "puma", "~> 5.0"
 # Use SCSS for stylesheets
@@ -40,7 +30,7 @@ gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.7"
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem "redis", "~> 4.0"
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -50,6 +40,8 @@ gem "jbuilder", "~> 2.7"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
 
+gem "rubycritic", require: false
+
 group :production do
   gem "redis-rack-cache"
 end
@@ -57,8 +49,17 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "devise"
+  gem "faker"
+  gem "pagy"
+  gem "pundit"
+  gem "ransack"
+  gem "redis-rails"
+  gem "reek"
   gem "rspec-rails"
   gem "shoulda-matchers"
+  gem "sidekiq"
+  gem "sidekiq-unique-jobs"
 end
 
 group :development do
@@ -69,13 +70,13 @@ group :development do
   gem "listen", "~> 3.3"
   gem "rack-mini-profiler", "~> 2.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem "bullet"
   gem "spring"
-  gem 'bullet'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 3.26"
+  gem "capybara"
   gem "fabrication"
   gem "rspec"
   gem "selenium-webdriver"

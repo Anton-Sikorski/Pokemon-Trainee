@@ -8,6 +8,7 @@ jobs:
   build:
     docker:
       - image: cimg/ruby:3.0.2-node
+      - image: redis
     steps:
       - checkout
       - ruby/install-deps
@@ -36,21 +37,43 @@ jobs:
       RAILS_ENV: test
     steps:
       - checkout
+      - run:
+          name: Wait for PG
+          command: dockerize -wait tcp://localhost:5432 -timeout 30s
+      - run:
+          name: install redis
+          command: |
+            pushd /tmp
+            wget http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz
+            tar xzf redis-$REDIS_VERSION.tar.gz
+            cd redis-$REDIS_VERSION && make
+            src/redis-server --daemonize yes
+            popd
+          environment:
+            REDIS_VERSION: 3.2.10
+
+      - run:
+          name: Wait for Redis
+          command: |
+            dockerize -wait tcp://localhost:6379 -timeout 30s
+
       - ruby/install-deps
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
+
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
       - run:
           name: Database setup
           command: bundle exec rails db:setup
+
       - run:
-          name: Schema load
-          command: bundle exec rails db:schema:load --trace
-      - ruby/rubocop-check
-      - ruby/rspec-test
+          name: Tests run
+          command: bundle exec rake
+
 
 workflows:
   version: 2

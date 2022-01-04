@@ -1,0 +1,9 @@
+<div class="profile-sidebar background-style">
+  <div class="avatar">
+    <%= image_tag current_user.avatar, size: "40x40" %>
+  </div>
+  <div class="data">
+    <p id="link"><strong><%= link_to current_user.name, main_path(current_user.id) %></strong></p>
+    <p class="email"><%= current_user.email %></p>
+  </div>
+</div>

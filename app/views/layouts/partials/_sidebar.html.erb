@@ -1,0 +1,16 @@
+<% unless controller_name.in?(%w[registrations sessions articles]) &&
+          action_name.in?(%w[new edit create]) %>
+  <sidebar class="sidebar">
+    <% if user_signed_in?%>
+      <%= render "main/profile" %>
+    <% else %>
+      <%= render "devise/sessions/new" %>
+    <% end %>
+    <% if controller_name.in?(%w[articles pokemon main]) && action_name.in?(%w[index show])%>
+      <%= render "articles/most_viewed" %>
+    <% end %>
+    <%if controller_name.in?(%w[articles pokemon main]) && action_name.in?(%w[index show]) %>
+      <%= render "pokemon/sample" %>
+    <% end %>
+  </sidebar>
+<% end %>

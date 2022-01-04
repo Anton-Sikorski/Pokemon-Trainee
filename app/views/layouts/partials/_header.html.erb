@@ -1,0 +1,19 @@
+<div class="logo-container">
+  <figure class="logo">
+    <%= image_tag("second.png", size: "60x40", alt: 'Logo') %>
+  </figure>
+  <span>Sick or</span>
+  <%= link_to '', root_path %>
+</div>
+
+<nav class="navigation">
+  <ul class="navbar">
+    <li id="link"><%= link_to "Blog", root_path %></li>
+    <li id="link"><%= link_to "Pokedex", pokemon_index_path %></li>
+    <li id="link"><%= link_to "User list", main_index_path %></li>
+    <% if user_signed_in? %>
+        <li id="link"><%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
+    <% end %>
+  </ul>
+
+</nav>

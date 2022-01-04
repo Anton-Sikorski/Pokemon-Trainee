@@ -3,19 +3,21 @@
 # authorized articles
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  rescue_from ActiveRecord::RecordNotFound do
+    render :not_found
+  end
 
   def index
-    @user = current_user
-    @articles = Article.all
-    authorize @articles
-    @pokemon = Pokemon.all
+    super
+    @search = Article.ransack(params[:q])
+    @articles = @search.result.order("views desc")
   end
 
   def show
+    super
     @article = Article.find(params[:id])
     increase_views(@article)
     @users = User.all
-    # ViewCounterWorker.perform_async(@article)
   end
 
   def new
@@ -54,6 +56,7 @@ class ArticlesController < ApplicationController
 
   private
 
+    # increases views on GET#show
     def increase_views(article)
       article.views += 1
       article.save

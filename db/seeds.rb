@@ -3,17 +3,14 @@
 require 'faker'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+
+LoadPokemonDb.perform_async if Pokemon.all.empty? # loads pokemon db on first encounter
 
 User.create(name: 'Anton', email: 'anton@mail.tu', password: '123456', role: 1)
 User.create(name: 'Yulia', email: 'yulia@mail.tu', password: '123456')
-User.create(name: 'Maksim', email: 'maksim@mail.tu', password: '123456')
 
-5.times do
+18.times do
   User.create(name: Faker::Name.name,
               email: Faker::Internet.email,
               password: Faker::Internet.password(min_length: 6))
@@ -29,20 +26,20 @@ Article.create(title: 'Pokémon Platinum',
                body: "The majority of Platinum follows the same story as Diamond and Pearl, however, there are some key changes. The beginning is slightly different - you meet Professor Rowan and his assistant before you get to the lake and he lets you choose one of the three starters. You then first battle your rival, rather than a wild Pokémon.\r\n\r\nThe order in which you tackle Sinnoh's gyms changes. In Diamond/Pearl your third gym battle was Maylene in Veilstone City, followed by Crasher Wake in Pastoria City, then Fantina in Hearthome City. In Platinum the third gym you come to is Fantina's then Maylene and Wake.",
                user_id: 2, status: 'public')
 
-5.times do
+10.times do
   Article.create(title: Faker::Lorem.sentence(word_count: rand(2..7)),
                  body: Faker::Lorem.paragraphs(number: rand(4..10)).join(" "),
-                 user_id: rand(8) + 1,
+                 user_id: rand(1..20),
                  status: 'public',
-                 created_at: rand(0..48).hours.ago
+                 created_at: rand(0..200).hours.ago
   )
 end
 
 25.times do
   Comment.create(body: Faker::Lorem.sentences.join(" "),
-                 user_id: rand(8) + 1,
+                 user_id: rand(1..20),
                  status: 'public',
-                 article_id: rand(8) + 1,
-                 created_at: rand(0..48).hours.ago
+                 article_id: rand(1..10),
+                 created_at: rand(0..180).hours.ago
   )
 end

@@ -3,10 +3,7 @@
 require "rails_helper"
 
 RSpec.describe Pokemon, type: :model do
-  pokemon = Pokemon.new
-  pokemon.name = "Bulbasaur"
-  pokemon.pokedex_id = 1
-  pokemon.created_at = DateTime.now
+  pokemon = Fabricate(:pokemon)
 
   it "is valid with valid attributes" do
     expect(pokemon).to be_valid
@@ -14,11 +11,11 @@ RSpec.describe Pokemon, type: :model do
 
   it "is not valid without name" do
     pokemon.name = nil
-    expect(pokemon).to_not be_valid
+    expect(pokemon).not_to be_valid
   end
 
   it "is not valid without pokedex id" do
     pokemon.id = nil
-    expect(pokemon).to_not be_valid
+    expect(pokemon).not_to be_valid
   end
 end
