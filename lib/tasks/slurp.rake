@@ -3,9 +3,9 @@
 require "json"
 require "net/http"
 
-namespace :slurp do
+namespace :pokemon do
   desc "TODO"
-  task pokemon: :environment do
+  task slurp: :environment do
     (1..898).each do |i|
       uri = "https://pokeapi.co/api/v2/pokemon/#{i}"
       # load pokemon data
