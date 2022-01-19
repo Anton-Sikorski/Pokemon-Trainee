@@ -2,6 +2,7 @@
 
 # worker, which populates Pokemon DB
 class LoadPokemonDb
+  API_URL = "https://pokeapi.co/api/v2/pokemon/"
   include Sidekiq::Worker
   sidekiq_options lock: :until_executed,
                   on_conflict: :reject
@@ -9,7 +10,7 @@ class LoadPokemonDb
     return unless Pokemon.all.empty?
 
     (1..898).each do |pokedex_number|
-      data = JSON.parse(Net::HTTP.get(URI("https://pokeapi.co/api/v2/pokemon/#{pokedex_number}")))
+      data = JSON.parse(Net::HTTP.get(URI(API_URL + pokedex_number.to_s)))
       pokemon_data = data
       sprite_data = data["sprites"]
       # load pokemon data
