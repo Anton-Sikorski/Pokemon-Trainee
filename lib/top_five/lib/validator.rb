@@ -14,14 +14,14 @@ class Validator
 
   private
 
-  def exist?
-    if Dir.exist?(path)
-      folder_name = path.split('/').last
-      puts "Top 5 file formats in #{folder_name} folder:"
-      path
-    else
-      puts "This folder doesn't exist!"
-      exit
+    def exist?
+      if Dir.exist?(path)
+        folder_name = path.split("/").last
+        Rails.logger.debug { "Top 5 file formats in #{folder_name} folder:" }
+        path
+      else
+        Rails.logger.debug "This folder doesn't exist!"
+        exit
+      end
     end
-  end
 end

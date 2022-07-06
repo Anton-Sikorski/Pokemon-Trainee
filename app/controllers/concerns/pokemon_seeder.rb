@@ -11,6 +11,6 @@ class PokemonSeeder
   private
 
     def seed_db
-      LoadPokemonDb.perform_async if Pokemon.all.empty? # loads pokemon db on first encounter
+      LoadPokemonDb.perform_async if Pokemon.all.empty?
     end
 end

@@ -14,8 +14,7 @@ class Sorter
 
   private
 
-  def sort_data
-    data.sort_by { |key, value| -value }.take(5).to_h
-  end
+    def sort_data
+      data.sort_by { |_key, value| -value }.take(5).to_h
+    end
 end
-

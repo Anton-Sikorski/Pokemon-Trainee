@@ -14,12 +14,11 @@ class Cleaner
 
   private
 
-  def clean_extension_names
-    files.map { |f| extname?(f) ? f : File.extname(f) }.sort
-  end
+    def clean_extension_names
+      files.map { |f| extname?(f) ? f : File.extname(f) }.sort
+    end
 
-  def extname?(str)
-    str[0] == '.'
-  end
+    def extname?(str)
+      str[0] == "."
+    end
 end
-

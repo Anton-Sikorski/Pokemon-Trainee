@@ -14,10 +14,10 @@ class Grouper
 
   private
 
-  def group_data
-    hash = {}
-    hash.default = 0
-    data.each { |item| item.empty? ? nil : hash[item] += 1 }
-    hash
-  end
+    def group_data
+      hash = {}
+      hash.default = 0
+      data.each { |item| item.empty? ? nil : hash[item] += 1 }
+      hash
+    end
 end

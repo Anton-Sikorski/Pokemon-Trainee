@@ -1,10 +1,10 @@
 # frozen_string_literal: true
-
-require 'faker'
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-
+1
 PokemonSeeder.new.call
+
+User.delete_all
+Article.delete_all
+Comment.delete_all
 
 User.create(name: 'Anton', email: 'anton@mail.tu', password: '123456', role: 1)
 User.create(name: 'Yulia', email: 'yulia@mail.tu', password: '123456')

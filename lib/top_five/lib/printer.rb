@@ -16,12 +16,11 @@ class Printer
 
   private
 
-  def define_max_size
-    data.each_key { |k| @max_size = k.size if k.size > max_size }
-  end
+    def define_max_size
+      data.each_key { |k| @max_size = k.size if k.size > max_size }
+    end
 
-  def show_data
-    data.each_pair { |e, c| printf "%-#{max_size}s %s\n", e, c }
-  end
+    def show_data
+      data.each_pair { |e, c| printf "%-#{max_size}s %s\n", e, c }
+    end
 end
-
